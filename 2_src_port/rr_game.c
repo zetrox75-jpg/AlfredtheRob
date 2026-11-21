@@ -1694,33 +1694,29 @@ static void fill_entry(ENT_CACHE* c, uint64_t p) {
             if (PL(bd)) { uint8_t b = 0; if (rr_read(bd + RR_OFF_PRIM_VALUE, &b, 1)) c->armor = b; }
         }
     }
-    /* Knockout (downed) state: KnockoutModel._knockoutPhase payload non-null.
-     * Replicated for remote characters, so it works for everyone on the roster. */
+    /* Knockout (downed) state: read the phase description name string and
+     * compare to "KnockedOut". This is more reliable than checking the enum
+     * index or EndTs, which can have false positives/negatives.
+     * Chain: character+0x298 -> KnockoutModel -> +0x18 _knockoutPhase (IPrimitiveData)
+     *        -> +0x18 value (KnockoutPhaseDescription) -> +0x10 Name string */
     {
-        /* Knocked state detection: use _endTs (active knockout timer) as the
-         * reliable signal for "currently downed". The phase enum and model
-         * existence persist after revive, so they're not used alone.
-         *   i = IsDead bool, s = StateModel._knockoutModel non-null,
-         *   e = KnockoutModel._endTs non-zero (reliable), p = phase enum index */
         uint64_t ko = rr_u64(p + RR_OFF_CHAR_KNOCKOUT);
         uint64_t phd = PL(ko) ? rr_u64(ko + RR_OFF_KO_PHASE) : 0;
         uint64_t phase = PL(phd) ? rr_u64(phd + RR_OFF_PRIM_VALUE) : 0;
-        int pidx = PL(phase) ? (int)rr_u32(phase + 0x18) : -1;
-        uint64_t ets = PL(ko) ? rr_u64(ko + 0x10) : 0;      /* _endTs */
-        int64_t etsv = 0; if (PL(ets)) rr_read(ets + 0x18, &etsv, 8);
-        uint64_t isd = rr_u64(p + RR_OFF_CHAR_ISDEAD);       /* IsDead */
+        /* Read the phase description name string */
+        char phasename[32] = {0};
+        if (PL(phase)) {
+            uint64_t namestr = rr_u64(phase + RR_OFF_DESC_NAME);
+            if (PL(namestr)) u_string(namestr, phasename, sizeof(phasename));
+        }
+        /* Also read IsDead for completeness */
+        uint64_t isd = rr_u64(p + RR_OFF_CHAR_ISDEAD);
         uint64_t isdm = PL(isd) ? rr_u64(isd + 0x10) : 0;
         int isdead = 0; if (PL(isdm)) { uint8_t b = 0; if (rr_read(isdm + 0x18, &b, 1)) isdead = b; }
-        uint64_t stm = rr_u64(p + 0x1E0u);                   /* StateModel */
-        uint64_t stko = PL(stm) ? rr_u64(stm + 0x30u) : 0;   /* _knockoutModel */
-        int has_ko_model = PL(stko) ? 1 : 0;
-        snprintf(c->knockphase, sizeof(c->knockphase), "i%d s%d e%d p%d",
-                 isdead, has_ko_model, etsv ? 1 : 0, pidx);
-        /* Player is knocked if IsDead is true OR they're in the KnockedOut phase.
-         * Phase index 0 = "KnockedOut" per UnknownCheats reversal data. This
-         * persists after revive but is the most reliable signal available for
-         * detecting currently downed players without false positives on all players. */
-        c->knocked = (isdead || pidx == 0) ? 1 : 0;
+        snprintf(c->knockphase, sizeof(c->knockphase), "i%d p='%s'",
+                 isdead, phasename);
+        /* Player is knocked if IsDead is true OR phase name is exactly "KnockedOut" */
+        c->knocked = (isdead || strcmp(phasename, "KnockedOut") == 0) ? 1 : 0;
     }
     uint64_t wm = rr_u64(p + RR_OFF_CHAR_WEAPON);
     if (!c->weapon[0] && PL(wm)) {
