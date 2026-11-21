@@ -1,0 +1,611 @@
+{
+  "game": "ROB RUN",
+  "source": "Build_Info.txt",
+  "generated": false,
+  "build": {
+    "GameAssembly.dll": {
+      "size": "0x8FF3000",
+      "timestamp": "0x6AFC1686"
+    },
+    "UnityPlayer.dll": {
+      "size": "0x2426000",
+      "timestamp": "0x6A28669F"
+    }
+  },
+  "note": "Les offsets deja presents dans robrun_offsets.json / robrun_sdk_offsets.json correspondent tous a Build_Info.txt (aucun change). Ce fichier regroupe uniquement ce que Build_Info apporte en PLUS : global statique, nouveaux champs, et Function RVAs. Offsets/RVAs en decimal + hex.",
+  "static_globals": {
+    "RR_GOM": {
+      "module": "UnityPlayer.dll",
+      "symbol": "GameObjectManager",
+      "offset_hex": "0x2230768",
+      "offset": 35850088
+    }
+  },
+  "new_fields": {
+    "RR_OFF_BATTLE_ROTATION_INPUT": {
+      "class": "BattleModel",
+      "field": "PlayerRotationInput",
+      "offset_hex": "0x40",
+      "offset": 64
+    },
+    "RR_OFF_BATTLE_WORLD_ENTITIES": {
+      "class": "BattleModel",
+      "field": "WorldEntitiesModel",
+      "offset_hex": "0x518",
+      "offset": 1304
+    },
+    "RR_OFF_GAME_START_PROCESSOR": {
+      "class": "Game",
+      "field": "_startGameProcessor",
+      "offset_hex": "0x98",
+      "offset": 152
+    },
+    "RR_OFF_GLOBAL_SENSITIVITY": {
+      "class": "GlobalModel",
+      "field": "_sensitivityModel",
+      "offset_hex": "0x58",
+      "offset": 88
+    },
+    "RR_OFF_AIM_CHARACTER_ID": {
+      "class": "AimTargetModel",
+      "field": "CharacterId",
+      "offset_hex": "0x10",
+      "offset": 16
+    },
+    "RR_OFF_AIM_TARGET_TYPE": {
+      "class": "AimTargetModel",
+      "field": "TargetType",
+      "offset_hex": "0x14",
+      "offset": 20,
+      "note": "3 = character"
+    },
+    "RR_OFF_AIM_ROTATION_INPUT": {
+      "class": "BattleAimTargetUpdater",
+      "field": "_playerRotationInput",
+      "offset_hex": "0x38",
+      "offset": 56
+    },
+    "RR_OFF_CAM_LOOKAT_ORIENT": {
+      "class": "BattleCameraModel",
+      "field": "LookAtCameraOrientation",
+      "offset_hex": "0x2C",
+      "offset": 44
+    },
+    "RR_OFF_CAMSTATE_FOV": {
+      "class": "CameraState",
+      "field": "FieldOfView",
+      "offset_hex": "0xB0",
+      "offset": 176
+    },
+    "RR_OFF_CAMSTATE_DUTCH": {
+      "class": "CameraState",
+      "field": "Dutch",
+      "offset_hex": "0xC0",
+      "offset": 192
+    },
+    "RR_OFF_CAMSTATE_RAW_POS": {
+      "class": "CameraState",
+      "field": "RawPosition",
+      "offset_hex": "0xFC",
+      "offset": 252
+    },
+    "RR_OFF_CAMSTATE_RAW_ORIENT": {
+      "class": "CameraState",
+      "field": "RawOrientation",
+      "offset_hex": "0x108",
+      "offset": 264
+    },
+    "RR_OFF_CAMSTATE_POS_CORRECTION": {
+      "class": "CameraState",
+      "field": "PositionCorrection",
+      "offset_hex": "0x128",
+      "offset": 296
+    },
+    "RR_OFF_CAMSTATE_ORIENT_CORRECTION": {
+      "class": "CameraState",
+      "field": "OrientationCorrection",
+      "offset_hex": "0x134",
+      "offset": 308
+    },
+    "RR_OFF_CMBRAIN_ACTIVE_CAM_PREV": {
+      "class": "CinemachineBrain",
+      "field": "mActiveCameraPreviousFrame",
+      "offset_hex": "0xA0",
+      "offset": 160
+    },
+    "RR_OFF_CMVCAM_LENS": {
+      "class": "CinemachineVirtualCamera",
+      "field": "m_Lens",
+      "offset_hex": "0xB8",
+      "offset": 184
+    },
+    "RR_OFF_ROTINPUT_YAW": {
+      "class": "PlayerRotationInputModel",
+      "field": "_yaw",
+      "offset_hex": "0x10",
+      "offset": 16
+    },
+    "RR_OFF_ROTINPUT_PITCH": {
+      "class": "PlayerRotationInputModel",
+      "field": "_pitch",
+      "offset_hex": "0x14",
+      "offset": 20
+    },
+    "RR_OFF_SENS_VALUE": {
+      "class": "SensitivityModel",
+      "field": "PlayerPreferenceValue",
+      "offset_hex": "0x10",
+      "offset": 16
+    },
+    "RR_OFF_SENS_AIM_VALUE": {
+      "class": "SensitivityModel",
+      "field": "PlayerPreferenceAimValue",
+      "offset_hex": "0x14",
+      "offset": 20
+    },
+    "RR_OFF_BATTLE_GLOBAL": {
+      "class": "BattleEntitiesModel",
+      "field": "_globalModel",
+      "offset_hex": "0xB0",
+      "offset": 176
+    },
+    "RR_OFF_SCREENS_UPDATERS": {
+      "class": "BattleScreensUpdater",
+      "field": "_updaters",
+      "offset_hex": "0x28",
+      "offset": 40
+    },
+    "RR_OFF_SCREEN_UPDATER": {
+      "class": "BattleScreenUpdater",
+      "field": "_updater",
+      "offset_hex": "0x18",
+      "offset": 24
+    },
+    "RR_OFF_BATTLEUPD_ENTITIES": {
+      "class": "BattleUpdater",
+      "field": "_battleEntitiesUpdater",
+      "offset_hex": "0x90",
+      "offset": 144
+    },
+    "RR_OFF_COMPOSITE_UPDATERS": {
+      "class": "CompositeUpdater",
+      "field": "_updaters",
+      "offset_hex": "0x10",
+      "offset": 16
+    },
+    "RR_OFF_SCREENMGR_CURRENT": {
+      "class": "ScreenManager",
+      "field": "_currentUpdater",
+      "offset_hex": "0x50",
+      "offset": 80
+    },
+    "RR_OFF_STARTPROC_SCREENMGR": {
+      "class": "StartGameProcessor",
+      "field": "_screenManager",
+      "offset_hex": "0x20",
+      "offset": 32
+    },
+    "RR_OFF_LOOKDIR_VALUE": {
+      "class": "LookDirectionModel",
+      "field": "_value",
+      "offset_hex": "0x10",
+      "offset": 16
+    },
+    "RR_OFF_LOOKDIR_YAW": {
+      "class": "LookDirectionModel",
+      "field": "_yaw",
+      "offset_hex": "0x1C",
+      "offset": 28
+    },
+    "RR_OFF_LOOKDIR_PITCH": {
+      "class": "LookDirectionModel",
+      "field": "_pitch",
+      "offset_hex": "0x20",
+      "offset": 32
+    },
+    "RR_OFF_CARCTRL_DRIVER": {
+      "class": "CarControlOwnerModel",
+      "field": "Driver",
+      "offset_hex": "0x18",
+      "offset": 24
+    },
+    "RR_OFF_CARDESC_PHYSICS": {
+      "class": "CarDescription",
+      "field": "_physics",
+      "offset_hex": "0xD0",
+      "offset": 208
+    },
+    "RR_OFF_CARDESC_HANDLING": {
+      "class": "CarDescription",
+      "field": "_handling",
+      "offset_hex": "0xD8",
+      "offset": 216
+    },
+    "RR_OFF_CARHANDLING_FWD_MAX_VEL": {
+      "class": "CarHandling",
+      "field": "ForwardMaxVelocity",
+      "offset_hex": "0x10",
+      "offset": 16
+    },
+    "RR_OFF_CARHANDLING_ACCEL_WINDOW_MAX_VEL": {
+      "class": "CarHandling",
+      "field": "AccelerationWindowMaxVelocity",
+      "offset_hex": "0x34",
+      "offset": 52
+    },
+    "RR_OFF_CARHANDLING_HANDBRAKE_ACCEL": {
+      "class": "CarHandling",
+      "field": "HandBreakAcceleration",
+      "offset_hex": "0x40",
+      "offset": 64
+    },
+    "RR_OFF_CAR_CONTROL_OWNER": {
+      "class": "CarModel",
+      "field": "ControlOwner",
+      "offset_hex": "0x50",
+      "offset": 80
+    },
+    "RR_OFF_CAR_TIRE_FRICTION": {
+      "class": "CarModel",
+      "field": "TireFrictionSettings",
+      "offset_hex": "0x88",
+      "offset": 136
+    },
+    "RR_OFF_CAR_STEERING": {
+      "class": "CarModel",
+      "field": "SteeringSettings",
+      "offset_hex": "0x90",
+      "offset": 144
+    },
+    "RR_OFF_CAR_TRANSMISSION": {
+      "class": "CarModel",
+      "field": "TransmissionSettings",
+      "offset_hex": "0x98",
+      "offset": 152
+    },
+    "RR_OFF_CARPHYS_GRAVITY": {
+      "class": "CarPhysics",
+      "field": "GravityForce",
+      "offset_hex": "0x30",
+      "offset": 48
+    },
+    "RR_OFF_CARPHYS_DOWNFORCE": {
+      "class": "CarPhysics",
+      "field": "DownForceCoefficient",
+      "offset_hex": "0x44",
+      "offset": 68
+    },
+    "RR_OFF_CARSTEER_MAX_ANGLE": {
+      "class": "CarSteeringDescription",
+      "field": "MaxSteeringAngle",
+      "offset_hex": "0x20",
+      "offset": 32
+    },
+    "RR_OFF_CARSTEER_ANGLE_SPEED": {
+      "class": "CarSteeringDescription",
+      "field": "SteeringAngleChangeSpeed",
+      "offset_hex": "0x30",
+      "offset": 48
+    },
+    "RR_OFF_CARTIRE_FW_STIFFNESS": {
+      "class": "CarTireFrictionDescription",
+      "field": "FwFrictionStiffness",
+      "offset_hex": "0x30",
+      "offset": 48
+    },
+    "RR_OFF_CARTIRE_BW_STIFFNESS": {
+      "class": "CarTireFrictionDescription",
+      "field": "BwFrictionStiffness",
+      "offset_hex": "0x48",
+      "offset": 72
+    },
+    "RR_OFF_CARTRANS_DRIVE_ACCEL": {
+      "class": "CarTransmissionDescription",
+      "field": "DriveForceAcceleration",
+      "offset_hex": "0x28",
+      "offset": 40
+    },
+    "RR_OFF_CARTRANS_BRAKE_ACCEL": {
+      "class": "CarTransmissionDescription",
+      "field": "BrakeForceAcceleration",
+      "offset_hex": "0x30",
+      "offset": 48
+    }
+  },
+  "function_rvas": {
+    "RR_RVA_BRAIN_PUSH_CALL": {
+      "rva_hex": "0xDCFA68",
+      "rva": 14482024,
+      "desc": "brain push call (ProcessActiveCamera)",
+      "group": "FOV / Camera"
+    },
+    "RR_RVA_PUSH_STATE_TO_UNITY_CAMERA": {
+      "rva_hex": "0xDCFAF0",
+      "rva": 14482160,
+      "desc": "PushStateToUnityCamera",
+      "group": "FOV / Camera"
+    },
+    "RR_RVA_BRAIN_OUTPUT_CAMERA": {
+      "rva_hex": "0xDD1780",
+      "rva": 14489472,
+      "desc": "brain OutputCamera",
+      "group": "FOV / Camera"
+    },
+    "RR_RVA_CAMERA_GET_FOV": {
+      "rva_hex": "0x61F3340",
+      "rva": 102708032,
+      "desc": "Camera.GetFieldOfView",
+      "group": "FOV / Camera"
+    },
+    "RR_RVA_ROTINPUT_SET_ROTATION": {
+      "rva_hex": "0xC4A800",
+      "rva": 12888064,
+      "desc": "PlayerRotationInputModel.SetRotation",
+      "group": "Aim / Rotation"
+    },
+    "RR_RVA_RAYCAST_DIRECTION": {
+      "rva_hex": "0x48A1EB0",
+      "rva": 76160688,
+      "desc": "raycast direction",
+      "group": "Aim / Rotation"
+    },
+    "RR_RVA_RAYCAST_HIT_POSITION": {
+      "rva_hex": "0x48A1F80",
+      "rva": 76160896,
+      "desc": "raycast hit position",
+      "group": "Aim / Rotation"
+    },
+    "RR_RVA_CAMERA_GET_CLEAR_COLOUR": {
+      "rva_hex": "0x61F26E0",
+      "rva": 102704864,
+      "desc": "camera get clear colour",
+      "group": "Sky / Fog / Sun"
+    },
+    "RR_RVA_CAMERA_GET_CLEAR_FLAGS": {
+      "rva_hex": "0x61F2AE0",
+      "rva": 102705888,
+      "desc": "camera get clear flags",
+      "group": "Sky / Fog / Sun"
+    },
+    "RR_RVA_CAMERA_SET_CLEAR_COLOUR": {
+      "rva_hex": "0x61F5DB0",
+      "rva": 102718896,
+      "desc": "camera set clear colour",
+      "group": "Sky / Fog / Sun"
+    },
+    "RR_RVA_CAMERA_SET_CLEAR_FLAGS": {
+      "rva_hex": "0x61F6100",
+      "rva": 102719744,
+      "desc": "camera set clear flags",
+      "group": "Sky / Fog / Sun"
+    },
+    "RR_RVA_FOG_GET": {
+      "rva_hex": "0x6223D40",
+      "rva": 102907200,
+      "desc": "fog get",
+      "group": "Sky / Fog / Sun"
+    },
+    "RR_RVA_SUN_OBJECT": {
+      "rva_hex": "0x6224060",
+      "rva": 102908000,
+      "desc": "sun object",
+      "group": "Sky / Fog / Sun"
+    },
+    "RR_RVA_FOG_SET": {
+      "rva_hex": "0x62246F0",
+      "rva": 102909680,
+      "desc": "fog set",
+      "group": "Sky / Fog / Sun"
+    },
+    "RR_RVA_SKYBOX_GET_MATERIAL": {
+      "rva_hex": "0x62252D0",
+      "rva": 102912720,
+      "desc": "skybox get material",
+      "group": "Sky / Fog / Sun"
+    },
+    "RR_RVA_SKYBOX_SET_MATERIAL": {
+      "rva_hex": "0x6225B30",
+      "rva": 102914864,
+      "desc": "skybox set material",
+      "group": "Sky / Fog / Sun"
+    },
+    "RR_RVA_LIGHT_GET_INTENSITY": {
+      "rva_hex": "0x62381A0",
+      "rva": 102990240,
+      "desc": "light get intensity",
+      "group": "Sky / Fog / Sun"
+    },
+    "RR_RVA_LIGHT_SET_INTENSITY": {
+      "rva_hex": "0x6239FB0",
+      "rva": 102997936,
+      "desc": "light set intensity",
+      "group": "Sky / Fog / Sun"
+    },
+    "RR_RVA_MATERIAL_HAS_PROPERTY": {
+      "rva_hex": "0x6241600",
+      "rva": 103028224,
+      "desc": "material HasProperty",
+      "group": "Mesh / Materials / Textures"
+    },
+    "RR_RVA_MATERIAL_SET_TEXTURE": {
+      "rva_hex": "0x6245340",
+      "rva": 103043904,
+      "desc": "material SetTexture",
+      "group": "Mesh / Materials / Textures"
+    },
+    "RR_RVA_MATERIAL_GET_SHADER": {
+      "rva_hex": "0x62468F0",
+      "rva": 103049456,
+      "desc": "material get shader",
+      "group": "Mesh / Materials / Textures"
+    },
+    "RR_RVA_MESH_RECALC_BOUNDS": {
+      "rva_hex": "0x6253110",
+      "rva": 103100688,
+      "desc": "mesh recalc bounds",
+      "group": "Mesh / Materials / Textures"
+    },
+    "RR_RVA_MESH_CLEAR": {
+      "rva_hex": "0x625AE60",
+      "rva": 103132768,
+      "desc": "mesh clear",
+      "group": "Mesh / Materials / Textures"
+    },
+    "RR_RVA_MESH_SET_VERTICES": {
+      "rva_hex": "0x625C4E0",
+      "rva": 103138528,
+      "desc": "mesh set vertices",
+      "group": "Mesh / Materials / Textures"
+    },
+    "RR_RVA_MESH_SET_TRIANGLES": {
+      "rva_hex": "0x625C670",
+      "rva": 103138928,
+      "desc": "mesh set triangles",
+      "group": "Mesh / Materials / Textures"
+    },
+    "RR_RVA_MESH_SET_UV": {
+      "rva_hex": "0x625CA70",
+      "rva": 103139952,
+      "desc": "mesh set uv",
+      "group": "Mesh / Materials / Textures"
+    },
+    "RR_RVA_MESH_SET_NORMALS": {
+      "rva_hex": "0x625CBA0",
+      "rva": 103140256,
+      "desc": "mesh set normals",
+      "group": "Mesh / Materials / Textures"
+    },
+    "RR_RVA_TEXTURE_CTOR": {
+      "rva_hex": "0x6275720",
+      "rva": 103241504,
+      "desc": "texture ctor",
+      "group": "Mesh / Materials / Textures"
+    },
+    "RR_RVA_IMAGE_LOAD_SPRITE": {
+      "rva_hex": "0x630F7A0",
+      "rva": 103872416,
+      "desc": "image load sprite",
+      "group": "Mesh / Materials / Textures"
+    },
+    "RR_RVA_TRANSFORM_SET_LOOK": {
+      "rva_hex": "0x452BC60",
+      "rva": 72531040,
+      "desc": "transform set look",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_GET_BOOL_PROPERTY": {
+      "rva_hex": "0x6226280",
+      "rva": 102916736,
+      "desc": "get bool property",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_RENDERER_ENABLE_DISABLE": {
+      "rva_hex": "0x6227000",
+      "rva": 102920192,
+      "desc": "renderer enable / disable",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_GET_REF_VARIANT_1": {
+      "rva_hex": "0x6229FC0",
+      "rva": 102932416,
+      "desc": "get ref (variant)",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_SET_REF_VARIANT_1": {
+      "rva_hex": "0x6245C20",
+      "rva": 103046176,
+      "desc": "set ref (variant)",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_SET_REF_VARIANT_2": {
+      "rva_hex": "0x6248D60",
+      "rva": 103058784,
+      "desc": "set ref (variant)",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_GAMEOBJECT_GET_CHILD": {
+      "rva_hex": "0x6290490",
+      "rva": 103351440,
+      "desc": "gameobject get child",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_COMPONENT_GET_REF": {
+      "rva_hex": "0x6290D90",
+      "rva": 103353744,
+      "desc": "component get ref",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_PARENT_GET_REF": {
+      "rva_hex": "0x6290F10",
+      "rva": 103354128,
+      "desc": "parent get ref",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_GAMEOBJECT_ADD_COMPONENT": {
+      "rva_hex": "0x6298EB0",
+      "rva": 103386800,
+      "desc": "gameobject add component",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_GAMEOBJECT_GET_CHILDREN": {
+      "rva_hex": "0x629AC00",
+      "rva": 103394304,
+      "desc": "gameobject get children",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_SET_REF": {
+      "rva_hex": "0x629CAD0",
+      "rva": 103402192,
+      "desc": "set ref",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_GET_REF": {
+      "rva_hex": "0x629D580",
+      "rva": 103404928,
+      "desc": "get ref",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_GAMEOBJECT_SET_ACTIVE": {
+      "rva_hex": "0x62A0DC0",
+      "rva": 103419328,
+      "desc": "gameobject SetActive",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_CAMERA_SKYBOX_CHAIN": {
+      "rva_hex": "0x62A1470",
+      "rva": 103421040,
+      "desc": "camera / skybox chain",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_TRANSFORM_SET_PARENT": {
+      "rva_hex": "0x62E1340",
+      "rva": 103682880,
+      "desc": "transform set parent",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_TRANSFORM_GET_POSITION": {
+      "rva_hex": "0x62E3960",
+      "rva": 103692640,
+      "desc": "transform get position",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_RENDERER_GET_COLOUR": {
+      "rva_hex": "0x62E3B60",
+      "rva": 103693152,
+      "desc": "renderer get colour",
+      "group": "GameObjects / Transforms"
+    },
+    "RR_RVA_CURSOR_LOCK_ADD": {
+      "rva_hex": "0xF15C00",
+      "rva": 15817728,
+      "desc": "cursor lock add",
+      "group": "Menu / Cursor"
+    },
+    "RR_RVA_CURSOR_LOCK_REMOVE": {
+      "rva_hex": "0xF15C70",
+      "rva": 15817840,
+      "desc": "cursor lock remove",
+      "group": "Menu / Cursor"
+    }
+  }
+}

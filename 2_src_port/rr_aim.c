@@ -21,6 +21,10 @@ RR_AIM_PICK rr_aim_pick(const RR_PLAYER* players, int count, const RR_CAMERA* ca
         if (locked_addr && (p->addr != locked_addr || p->id != locked_id)) continue;
         if (!p->addr || !p->valid || p->dead || p->is_vehicle || p->is_loot || p->local || p->hidden_in_object) continue;
         if (p->knocked && !config->aa_target_knocked) continue;
+        /* A confirmed 0-HP enemy is effectively downed; treat it like knocked.
+         * p->health is populated only when show_health is on (otherwise -1), so
+         * this never fires when health is unavailable. */
+        if (config->show_health && p->health == 0 && !config->aa_target_knocked) continue;
         if (!rr_relationship_allowed(p->relationships, config->aa_target_clan, config->aa_target_police, config->aa_target_party)) continue;
         if (!isfinite(p->dist) || (config->aa_dist > 0 && p->dist > (float)config->aa_dist)) continue;
 
