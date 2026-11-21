@@ -1697,12 +1697,11 @@ static void fill_entry(ENT_CACHE* c, uint64_t p) {
     /* Knockout (downed) state: KnockoutModel._knockoutPhase payload non-null.
      * Replicated for remote characters, so it works for everyone on the roster. */
     {
-        /* DIAGNOSTIC: the KnockoutPhase persists (index 0) after a revive, so it
-         * is NOT a reliable "currently downed" signal. Show several live signals
-         * to find the one that is true only while a player is actually on the
-         * ground. Aim does not use this yet (c->knocked stays 0).
+        /* Knocked state detection: use _endTs (active knockout timer) as the
+         * reliable signal for "currently downed". The phase enum and model
+         * existence persist after revive, so they're not used alone.
          *   i = IsDead bool, s = StateModel._knockoutModel non-null,
-         *   e = KnockoutModel._endTs non-zero, p = phase enum index. */
+         *   e = KnockoutModel._endTs non-zero (reliable), p = phase enum index */
         uint64_t ko = rr_u64(p + RR_OFF_CHAR_KNOCKOUT);
         uint64_t phd = PL(ko) ? rr_u64(ko + RR_OFF_KO_PHASE) : 0;
         uint64_t phase = PL(phd) ? rr_u64(phd + RR_OFF_PRIM_VALUE) : 0;
@@ -1714,12 +1713,13 @@ static void fill_entry(ENT_CACHE* c, uint64_t p) {
         int isdead = 0; if (PL(isdm)) { uint8_t b = 0; if (rr_read(isdm + 0x18, &b, 1)) isdead = b; }
         uint64_t stm = rr_u64(p + 0x1E0u);                   /* StateModel */
         uint64_t stko = PL(stm) ? rr_u64(stm + 0x30u) : 0;   /* _knockoutModel */
+        int has_ko_model = PL(stko) ? 1 : 0;
         snprintf(c->knockphase, sizeof(c->knockphase), "i%d s%d e%d p%d",
-                 isdead, PL(stko) ? 1 : 0, etsv ? 1 : 0, pidx);
-        /* Best signal so far: IsDead is 1 only when a player is actually
-         * dead/downed (0 while standing or crouching). The debug tag above
-         * stays visible so this can be confirmed live. */
-        c->knocked = isdead;
+                 isdead, has_ko_model, etsv ? 1 : 0, pidx);
+        /* Player is knocked if IsDead is true OR an active knockout timer exists.
+         * _endTs is set when a player is downed and cleared on revive/death,
+         * unlike the phase enum or model existence which persist after revive. */
+        c->knocked = (isdead || etsv != 0) ? 1 : 0;
     }
     uint64_t wm = rr_u64(p + RR_OFF_CHAR_WEAPON);
     if (!c->weapon[0] && PL(wm)) {
