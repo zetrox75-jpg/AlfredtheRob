@@ -1716,10 +1716,11 @@ static void fill_entry(ENT_CACHE* c, uint64_t p) {
         int has_ko_model = PL(stko) ? 1 : 0;
         snprintf(c->knockphase, sizeof(c->knockphase), "i%d s%d e%d p%d",
                  isdead, has_ko_model, etsv ? 1 : 0, pidx);
-        /* Player is knocked if IsDead is true OR an active knockout timer exists.
-         * _endTs is set when a player is downed and cleared on revive/death,
-         * unlike the phase enum or model existence which persist after revive. */
-        c->knocked = (isdead || etsv != 0) ? 1 : 0;
+        /* Player is knocked if IsDead is true OR they're in the KnockedOut phase.
+         * Phase index 0 = "KnockedOut" per UnknownCheats reversal data. This
+         * persists after revive but is the most reliable signal available for
+         * detecting currently downed players without false positives on all players. */
+        c->knocked = (isdead || pidx == 0) ? 1 : 0;
     }
     uint64_t wm = rr_u64(p + RR_OFF_CHAR_WEAPON);
     if (!c->weapon[0] && PL(wm)) {
