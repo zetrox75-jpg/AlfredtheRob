@@ -1,0 +1,713 @@
+{
+  "schema": 1,
+  "source": "fields.csv (registered instance offsets)",
+  "dump": "F:\\Game Dev\\Rob Run\\analysis\\dump-20261112",
+  "input_sha256": {
+    "GameAssembly.dll": "03003754353ff08380dc8e91920f2c77f7977b370d413083acfe9b4bc65c18ab",
+    "global-metadata.dat": "23bed54126a2b89e9c78cfdbd59dc3be2bc14a5817823cf057cde33984618cc9"
+  },
+  "fields": {
+    "RR_OFF_WEM_CONTAINERS": {
+      "assembly": "Models",
+      "type": "Models.Models.WorldEntities.WorldEntitiesModel",
+      "field": "_containers",
+      "offset": 32,
+      "instance_size": 2264,
+      "declaration": "private readonly Dictionary<int, ContainerModel> _containers",
+      "dump_line": 149544
+    },
+    "RR_OFF_WEM_DROPPED_LOOT": {
+      "assembly": "Models",
+      "type": "Models.Models.WorldEntities.WorldEntitiesModel",
+      "field": "_loots",
+      "offset": 56,
+      "instance_size": 2264,
+      "declaration": "private readonly Dictionary<int, ILootModel> _loots",
+      "dump_line": 149547
+    },
+    "RR_OFF_WEM_VEHICLE_LOOT": {
+      "assembly": "Models",
+      "type": "Models.Models.WorldEntities.WorldEntitiesModel",
+      "field": "_vehicleLoots",
+      "offset": 64,
+      "instance_size": 2264,
+      "declaration": "private readonly Dictionary<int, IVehicleLootModel> _vehicleLoots",
+      "dump_line": 149548
+    },
+    "RR_OFF_WEM_DOORS": {
+      "assembly": "Models",
+      "type": "Models.Models.WorldEntities.WorldEntitiesModel",
+      "field": "_doors",
+      "offset": 72,
+      "instance_size": 2264,
+      "declaration": "private readonly Dictionary<int, DoorModel> _doors",
+      "dump_line": 149549
+    },
+    "RR_OFF_WEM_CARS": {
+      "assembly": "Models",
+      "type": "Models.Models.WorldEntities.WorldEntitiesModel",
+      "field": "_cars",
+      "offset": 96,
+      "instance_size": 2264,
+      "declaration": "private readonly Dictionary<int, CarModel> _cars",
+      "dump_line": 149552
+    },
+    "RR_OFF_WEM_HELICOPTERS": {
+      "assembly": "Models",
+      "type": "Models.Models.WorldEntities.WorldEntitiesModel",
+      "field": "_helicopters",
+      "offset": 104,
+      "instance_size": 2264,
+      "declaration": "private readonly Dictionary<int, HelicopterModel> _helicopters",
+      "dump_line": 149553
+    },
+    "RR_OFF_WEM_HIDE_OBJECTS": {
+      "assembly": "Models",
+      "type": "Models.Models.WorldEntities.WorldEntitiesModel",
+      "field": "_hideObjects",
+      "offset": 432,
+      "instance_size": 2264,
+      "declaration": "private readonly Dictionary<int, HideObjectModel> _hideObjects",
+      "dump_line": 149594
+    },
+    "RR_OFF_CONTAINER_POS": {
+      "assembly": "Models",
+      "type": "Models.Models.Container.ContainerModel",
+      "field": "PositionModel",
+      "offset": 40,
+      "instance_size": 88,
+      "declaration": "private readonly IPositionModel <PositionModel>k__BackingField",
+      "dump_line": 181089
+    },
+    "RR_OFF_DOOR_STATE": {
+      "assembly": "Models",
+      "type": "Models.Models.Door.DoorModel",
+      "field": "State",
+      "offset": 48,
+      "instance_size": 152,
+      "declaration": "private readonly DoorStateModel <State>k__BackingField",
+      "dump_line": 178720
+    },
+    "RR_OFF_DOOR_POS": {
+      "assembly": "Models",
+      "type": "Models.Models.Door.DoorModel",
+      "field": "Position",
+      "offset": 56,
+      "instance_size": 152,
+      "declaration": "private readonly InteractPositionModel <Position>k__BackingField",
+      "dump_line": 178722
+    },
+    "RR_OFF_DOOR_STATE_DATA": {
+      "assembly": "Models",
+      "type": "Models.Models.DoorState.DoorStateModel",
+      "field": "_state",
+      "offset": 16,
+      "instance_size": 24,
+      "declaration": "private readonly IPrimitiveData<DoorStateDescription> _state",
+      "dump_line": 178470
+    },
+    "RR_OFF_DROPPED_LOOT_POS": {
+      "assembly": "Models",
+      "type": "Models.Models.LootModel.LootModel",
+      "field": "InteractPositionModel",
+      "offset": 40,
+      "instance_size": 96,
+      "declaration": "private readonly IPositionModel <InteractPositionModel>k__BackingField",
+      "dump_line": 171503
+    },
+    "RR_OFF_VEHICLE_LOOT_POS": {
+      "assembly": "Models",
+      "type": "Models.Models.VehicleLootModel.VehicleLootModel",
+      "field": "InteractPositionModel",
+      "offset": 40,
+      "instance_size": 88,
+      "declaration": "private readonly IPositionModel <InteractPositionModel>k__BackingField",
+      "dump_line": 153291
+    },
+    "RR_OFF_POS_X": {
+      "assembly": "Models",
+      "type": "Models.Models.PositionModel.PositionModel",
+      "field": "X",
+      "offset": 16,
+      "instance_size": 32,
+      "declaration": "private readonly float <X>k__BackingField",
+      "dump_line": 163745
+    },
+    "RR_OFF_POS_Y": {
+      "assembly": "Models",
+      "type": "Models.Models.PositionModel.PositionModel",
+      "field": "Y",
+      "offset": 20,
+      "instance_size": 32,
+      "declaration": "private readonly float <Y>k__BackingField",
+      "dump_line": 163747
+    },
+    "RR_OFF_POS_Z": {
+      "assembly": "Models",
+      "type": "Models.Models.PositionModel.PositionModel",
+      "field": "Z",
+      "offset": 24,
+      "instance_size": 32,
+      "declaration": "private readonly float <Z>k__BackingField",
+      "dump_line": 163749
+    },
+    "RR_OFF_INTERACT_POS_X": {
+      "assembly": "Models",
+      "type": "Models.Models.InteractPosition.InteractPositionModel",
+      "field": "X",
+      "offset": 16,
+      "instance_size": 32,
+      "declaration": "private float <X>k__BackingField",
+      "dump_line": 174601
+    },
+    "RR_OFF_INTERACT_POS_Y": {
+      "assembly": "Models",
+      "type": "Models.Models.InteractPosition.InteractPositionModel",
+      "field": "Y",
+      "offset": 20,
+      "instance_size": 32,
+      "declaration": "private float <Y>k__BackingField",
+      "dump_line": 174603
+    },
+    "RR_OFF_INTERACT_POS_Z": {
+      "assembly": "Models",
+      "type": "Models.Models.InteractPosition.InteractPositionModel",
+      "field": "Z",
+      "offset": 24,
+      "instance_size": 32,
+      "declaration": "private float <Z>k__BackingField",
+      "dump_line": 174605
+    },
+    "RR_OFF_LOOK_MODEL": {
+      "assembly": "Models",
+      "type": "Models.Models.BattleCharacter.BattleCharacterModel",
+      "field": "LookDirection",
+      "offset": 112,
+      "instance_size": 848,
+      "declaration": "private readonly LookDirectionModel <LookDirection>k__BackingField",
+      "dump_line": 195837
+    },
+    "RR_OFF_CHAR_SKELETON": {
+      "assembly": "Models",
+      "type": "Models.Models.BattleCharacter.BattleCharacterModel",
+      "field": "SkeletonModel",
+      "offset": 312,
+      "instance_size": 848,
+      "declaration": "private readonly SkeletonModel <SkeletonModel>k__BackingField",
+      "dump_line": 195887
+    },
+    "RR_OFF_CHAR_INVEH": {
+      "assembly": "Models",
+      "type": "Models.Models.BattleCharacter.BattleCharacterModel",
+      "field": "InVehicleModel",
+      "offset": 456,
+      "instance_size": 848,
+      "declaration": "private readonly InVehicleModel <InVehicleModel>k__BackingField",
+      "dump_line": 195923
+    },
+    "RR_OFF_CHAR_STATE": {
+      "assembly": "Models",
+      "type": "Models.Models.BattleCharacter.BattleCharacterModel",
+      "field": "StateModel",
+      "offset": 480,
+      "instance_size": 848,
+      "declaration": "private readonly IBattleCharacterStateModel <StateModel>k__BackingField",
+      "dump_line": 195929
+    },
+    "RR_OFF_COMMON_ITEM_IN_HANDS": {
+      "assembly": "Models",
+      "type": "Models.Data.BattleCharacterCommonData",
+      "field": "ItemInHands",
+      "offset": 184,
+      "instance_size": 552,
+      "declaration": "private readonly IPrimitiveData<InventoryItemDescription> <ItemInHands>k__BackingField",
+      "dump_line": 211861
+    },
+    "RR_OFF_INVEH_ID": {
+      "assembly": "Models",
+      "type": "Models.Models.InVehicle.InVehicleModel",
+      "field": "_entityId",
+      "offset": 16,
+      "instance_size": 40,
+      "declaration": "private readonly IPrimitiveData<int> _entityId",
+      "dump_line": 175312
+    },
+    "RR_OFF_INVEH_TYPE": {
+      "assembly": "Models",
+      "type": "Models.Models.InVehicle.InVehicleModel",
+      "field": "_vehicleType",
+      "offset": 32,
+      "instance_size": 40,
+      "declaration": "private readonly IPrimitiveData<VehicleTypeDescription> _vehicleType",
+      "dump_line": 175314
+    },
+    "RR_OFF_STATE_HIDDEN": {
+      "assembly": "Models",
+      "type": "Models.Models.BattleCharacterStateModel.BattleCharacterStateModel",
+      "field": "_characterHiddenStateModel",
+      "offset": 32,
+      "instance_size": 64,
+      "declaration": "private readonly ICharacterHiddenStateModel _characterHiddenStateModel",
+      "dump_line": 194503
+    },
+    "RR_OFF_HIDDEN_ID_DATA": {
+      "assembly": "Models",
+      "type": "Models.Models.CharacterHideObjectState.CharacterHideObjectStateModel",
+      "field": "_hideObjectEntityIdData",
+      "offset": 16,
+      "instance_size": 24,
+      "declaration": "private readonly IPrimitiveData<int> _hideObjectEntityIdData",
+      "dump_line": 183850
+    },
+    "RR_OFF_HIDE_DESC": {
+      "assembly": "Models",
+      "type": "Models.Models.HideObject.HideObjectModel",
+      "field": "Description",
+      "offset": 24,
+      "instance_size": 32,
+      "declaration": "private readonly LocationHideObjectDescription <Description>k__BackingField",
+      "dump_line": 175681
+    },
+    "RR_OFF_HIDE_DESC_ID": {
+      "assembly": "Models",
+      "type": "Models.References.HideObject.LocationHideObjectDescription",
+      "field": "EntityId",
+      "offset": 32,
+      "instance_size": 104,
+      "declaration": "private readonly int <EntityId>k__BackingField",
+      "dump_line": 95099
+    },
+    "RR_OFF_HIDE_DESC_POS": {
+      "assembly": "Models",
+      "type": "Models.References.HideObject.LocationHideObjectDescription",
+      "field": "Position",
+      "offset": 48,
+      "instance_size": 104,
+      "declaration": "private readonly Vector3 <Position>k__BackingField",
+      "dump_line": 95103
+    },
+    "RR_OFF_HIDE_DESC_TYPE": {
+      "assembly": "Models",
+      "type": "Models.References.HideObject.LocationHideObjectDescription",
+      "field": "HideObjectDescriptionFunc",
+      "offset": 40,
+      "instance_size": 104,
+      "declaration": "private readonly Func<HideObjectDescription> <HideObjectDescriptionFunc>k__BackingField",
+      "dump_line": 95101
+    },
+    "RR_OFF_HIDE_OCCUPANT": {
+      "assembly": "Models",
+      "type": "Models.Models.HideObject.HideObjectModel",
+      "field": "_entityId",
+      "offset": 16,
+      "instance_size": 32,
+      "declaration": "private int _entityId",
+      "dump_line": 175679
+    },
+    "RR_OFF_HIDE_DESC_ROT": {
+      "assembly": "Models",
+      "type": "Models.References.HideObject.LocationHideObjectDescription",
+      "field": "Orientation",
+      "offset": 60,
+      "instance_size": 104,
+      "declaration": "private readonly Quaternion <Orientation>k__BackingField",
+      "dump_line": 95105
+    },
+    "RR_OFF_HIDE_DESC_INTERACT": {
+      "assembly": "Models",
+      "type": "Models.References.HideObject.LocationHideObjectDescription",
+      "field": "InteractPoint",
+      "offset": 76,
+      "instance_size": 104,
+      "declaration": "private readonly Vector3 <InteractPoint>k__BackingField",
+      "dump_line": 95107
+    },
+    "RR_OFF_BATTLE_VOICE_ROOM": {
+      "assembly": "Battle",
+      "type": "Game.Battle.BattleModel",
+      "field": "VoiceChatBattleRoomModel",
+      "offset": 1584,
+      "instance_size": 1624,
+      "declaration": "private readonly VoiceChatBattleRoomModel <VoiceChatBattleRoomModel>k__BackingField",
+      "dump_line": 239051
+    },
+    "RR_OFF_BATTLE_PLAYER_SLOTS": {
+      "assembly": "Battle",
+      "type": "Game.Battle.BattleModel",
+      "field": "BattleCharacterSlotsModel",
+      "offset": 1232,
+      "instance_size": 1624,
+      "declaration": "private readonly BattleCharacterSlotsModel <BattleCharacterSlotsModel>k__BackingField",
+      "dump_line": 238963
+    },
+    "RR_OFF_VOICE_ROOM_PARTICIPANTS": {
+      "assembly": "Global",
+      "type": "Game.Global.VoiceChat.VoiceChatRoomModel",
+      "field": "ParticipantsModel",
+      "offset": 56,
+      "instance_size": 64,
+      "declaration": "public readonly VoiceChatParticipantsModel ParticipantsModel",
+      "dump_line": 417525
+    },
+    "RR_OFF_VOICE_STRING_MAP": {
+      "assembly": "Global",
+      "type": "Game.Global.VoiceChat.VoiceChatParticipantsModel",
+      "field": "_participantStringIdToModels",
+      "offset": 24,
+      "instance_size": 32,
+      "declaration": "private readonly ConcurrentDictionary<string, VoiceChatRoomParticipantModel> _participantStringIdToModels",
+      "dump_line": 417364
+    },
+    "RR_OFF_VOICE_SLOT": {
+      "assembly": "Battle",
+      "type": "Game.Battle.VoiceChat.VoiceChatBattleParticipantModel",
+      "field": "SlotDescription",
+      "offset": 56,
+      "instance_size": 112,
+      "declaration": "private BattleCharacterSlotDescription <SlotDescription>k__BackingField",
+      "dump_line": 255585
+    },
+    "RR_OFF_VOICE_HIDE_ID": {
+      "assembly": "Battle",
+      "type": "Game.Battle.VoiceChat.VoiceChatBattleParticipantModel",
+      "field": "HideObjectEntityId",
+      "offset": 100,
+      "instance_size": 112,
+      "declaration": "private int <HideObjectEntityId>k__BackingField",
+      "dump_line": 255593
+    },
+    "RR_OFF_VOICE_USER_ID": {
+      "assembly": "Global",
+      "type": "Game.Global.VoiceChat.VoiceChatRoomParticipantModel",
+      "field": "ProductUserIdString",
+      "offset": 24,
+      "instance_size": 56,
+      "declaration": "private readonly string <ProductUserIdString>k__BackingField",
+      "dump_line": 417575
+    },
+    "RR_OFF_VOICE_SPEAKING": {
+      "assembly": "Global",
+      "type": "Game.Global.VoiceChat.VoiceChatRoomParticipantModel",
+      "field": "IsSpeaking",
+      "offset": 33,
+      "instance_size": 56,
+      "declaration": "private bool <IsSpeaking>k__BackingField",
+      "dump_line": 417579
+    },
+    "RR_OFF_SLOTS_DICTIONARY": {
+      "assembly": "Models",
+      "type": "Models.Models.BattleCharacterSlots.BattleCharacterSlotsModel",
+      "field": "_slots",
+      "offset": 16,
+      "instance_size": 32,
+      "declaration": "private readonly Dictionary<BattleCharacterSlotDescription, BattleCharacterSlotModel> _slots",
+      "dump_line": 194665
+    },
+    "RR_OFF_SLOT_DATA": {
+      "assembly": "Models",
+      "type": "Models.Models.BattleCharacterSlots.BattleCharacterSlotModel",
+      "field": "_data_1",
+      "offset": 16,
+      "instance_size": 32,
+      "declaration": "private readonly BattleCharacterSlotData _data",
+      "dump_line": 194605
+    },
+    "RR_OFF_SLOT_DESC": {
+      "assembly": "Models",
+      "type": "Models.Models.BattleCharacterSlots.BattleCharacterSlotModel",
+      "field": "Description",
+      "offset": 24,
+      "instance_size": 32,
+      "declaration": "private readonly BattleCharacterSlotDescription <Description>k__BackingField",
+      "dump_line": 194607
+    },
+    "RR_OFF_SLOT_ENTITY_ID": {
+      "assembly": "Models",
+      "type": "Models.Data.BattleCharacterSlotData",
+      "field": "EntityId",
+      "offset": 32,
+      "instance_size": 72,
+      "declaration": "private readonly IPrimitiveData<int> <EntityId>k__BackingField",
+      "dump_line": 212826
+    },
+    "RR_OFF_SLOT_NICKNAME": {
+      "assembly": "Models",
+      "type": "Models.Data.BattleCharacterSlotData",
+      "field": "Nickname",
+      "offset": 48,
+      "instance_size": 72,
+      "declaration": "private readonly IPrimitiveData<string> <Nickname>k__BackingField",
+      "dump_line": 212830
+    },
+    "RR_OFF_SLOT_USER_ID": {
+      "assembly": "Models",
+      "type": "Models.Data.BattleCharacterSlotData",
+      "field": "EOSProductUserId",
+      "offset": 64,
+      "instance_size": 72,
+      "declaration": "private readonly IPrimitiveData<string> <EOSProductUserId>k__BackingField",
+      "dump_line": 212834
+    },
+    "RR_OFF_SEATS_DATA": {
+      "assembly": "Models",
+      "type": "Models.Models.VehicleSeats.VehicleSeatsModel",
+      "field": "_data_1",
+      "offset": 16,
+      "instance_size": 48,
+      "declaration": "private readonly ReferenceMapData<VehicleSeatSlotDescription, VehicleSeatData> _data",
+      "dump_line": 153098
+    },
+    "RR_OFF_SEAT_OCCUPIED": {
+      "assembly": "Models",
+      "type": "Models.Data.Vehicle.VehicleSeatData",
+      "field": "Occupied",
+      "offset": 32,
+      "instance_size": 48,
+      "declaration": "private readonly IPrimitiveData<bool> <Occupied>k__BackingField",
+      "dump_line": 219766
+    },
+    "RR_OFF_SEAT_ENTITY_ID": {
+      "assembly": "Models",
+      "type": "Models.Data.Vehicle.VehicleSeatData",
+      "field": "EntityId",
+      "offset": 40,
+      "instance_size": 48,
+      "declaration": "private readonly IPrimitiveData<int> <EntityId>k__BackingField",
+      "dump_line": 219768
+    },
+    "RR_OFF_CAR_ID": {
+      "assembly": "Models",
+      "type": "Models.Models.Car.CarModel",
+      "field": "Id",
+      "offset": 16,
+      "instance_size": 584,
+      "declaration": "private readonly int <Id>k__BackingField",
+      "dump_line": 187487
+    },
+    "RR_OFF_CAR_OWNER_ROLE": {
+      "assembly": "Models",
+      "type": "Models.Models.Car.CarModel",
+      "field": "OwnerRole",
+      "offset": 72,
+      "instance_size": 584,
+      "declaration": "private readonly IPrimitiveModel<PlayerRoleDescription> <OwnerRole>k__BackingField",
+      "dump_line": 187501
+    },
+    "RR_OFF_CAR_DESC": {
+      "assembly": "Models",
+      "type": "Models.Models.Car.CarModel",
+      "field": "Description",
+      "offset": 120,
+      "instance_size": 584,
+      "declaration": "private readonly CarDescription <Description>k__BackingField",
+      "dump_line": 187513
+    },
+    "RR_OFF_CAR_TRANSFORM": {
+      "assembly": "Models",
+      "type": "Models.Models.Car.CarModel",
+      "field": "Transform",
+      "offset": 192,
+      "instance_size": 584,
+      "declaration": "private readonly VehicleTransformModel <Transform>k__BackingField",
+      "dump_line": 187531
+    },
+    "RR_OFF_CAR_SEATS": {
+      "assembly": "Models",
+      "type": "Models.Models.Car.CarModel",
+      "field": "Seats",
+      "offset": 224,
+      "instance_size": 584,
+      "declaration": "private readonly VehicleSeatsModel <Seats>k__BackingField",
+      "dump_line": 187539
+    },
+    "RR_OFF_HELI_ID": {
+      "assembly": "Models",
+      "type": "Models.Models.Helicopter.HelicopterModel",
+      "field": "Id",
+      "offset": 16,
+      "instance_size": 400,
+      "declaration": "private readonly int <Id>k__BackingField",
+      "dump_line": 175927
+    },
+    "RR_OFF_HELI_OWNER_ROLE": {
+      "assembly": "Models",
+      "type": "Models.Models.Helicopter.HelicopterModel",
+      "field": "OwnerRole",
+      "offset": 232,
+      "instance_size": 400,
+      "declaration": "private readonly IPrimitiveModel<PlayerRoleDescription> <OwnerRole>k__BackingField",
+      "dump_line": 175982
+    },
+    "RR_OFF_HELI_DESC": {
+      "assembly": "Models",
+      "type": "Models.Models.Helicopter.HelicopterModel",
+      "field": "Description",
+      "offset": 72,
+      "instance_size": 400,
+      "declaration": "private readonly HelicopterDescription <Description>k__BackingField",
+      "dump_line": 175941
+    },
+    "RR_OFF_HELI_TRANSFORM": {
+      "assembly": "Models",
+      "type": "Models.Models.Helicopter.HelicopterModel",
+      "field": "Transform",
+      "offset": 112,
+      "instance_size": 400,
+      "declaration": "private readonly VehicleTransformModel <Transform>k__BackingField",
+      "dump_line": 175951
+    },
+    "RR_OFF_HELI_SEATS": {
+      "assembly": "Models",
+      "type": "Models.Models.Helicopter.HelicopterModel",
+      "field": "Seats",
+      "offset": 144,
+      "instance_size": 400,
+      "declaration": "private readonly VehicleSeatsModel <Seats>k__BackingField",
+      "dump_line": 175959
+    },
+    "RR_OFF_ENTRY_GAME": {
+      "assembly": "Game",
+      "type": "Start.UnityEntry",
+      "field": "_game",
+      "offset": 40,
+      "instance_size": 48,
+      "declaration": "private Game _game",
+      "dump_line": 1699097
+    },
+    "RR_OFF_GAME_MODEL": {
+      "assembly": "Game",
+      "type": "Game.Game",
+      "field": "GameModel",
+      "offset": 208,
+      "instance_size": 224,
+      "declaration": "private GameModel <GameModel>k__BackingField",
+      "dump_line": 1700248
+    },
+    "RR_OFF_GAME_BATTLE": {
+      "assembly": "Game",
+      "type": "Game.GameModel",
+      "field": "_battleModel",
+      "offset": 16,
+      "instance_size": 176,
+      "declaration": "private BattleModel _battleModel",
+      "dump_line": 1700320
+    },
+    "RR_OFF_BATTLE_ENTITIES": {
+      "assembly": "Battle",
+      "type": "Game.Battle.BattleModel",
+      "field": "BattleEntitiesModel",
+      "offset": 144,
+      "instance_size": 1624,
+      "declaration": "private readonly IBattleEntitiesModel <BattleEntitiesModel>k__BackingField",
+      "dump_line": 238691
+    },
+    "RR_OFF_BATTLE_CAMERA": {
+      "assembly": "Battle",
+      "type": "Game.Battle.BattleModel",
+      "field": "BattleCameraModel",
+      "offset": 856,
+      "instance_size": 1624,
+      "declaration": "private readonly BattleCameraModel <BattleCameraModel>k__BackingField",
+      "dump_line": 238869
+    },
+    "RR_OFF_BATTLE_AIM": {
+      "assembly": "Battle",
+      "type": "Game.Battle.BattleModel",
+      "field": "AimTargetModel",
+      "offset": 408,
+      "instance_size": 1624,
+      "declaration": "private readonly AimTargetModel <AimTargetModel>k__BackingField",
+      "dump_line": 238757
+    },
+    "RR_OFF_BATTLE_WORLD": {
+      "assembly": "Battle",
+      "type": "Game.Battle.BattleEntitiesModel",
+      "field": "_worldEntitiesModel",
+      "offset": 96,
+      "instance_size": 232,
+      "declaration": "private readonly WorldEntitiesModel _worldEntitiesModel",
+      "dump_line": 237994
+    },
+    "RR_OFF_BATTLE_MODELS": {
+      "assembly": "Battle",
+      "type": "Game.Battle.BattleEntitiesModel",
+      "field": "_models",
+      "offset": 80,
+      "instance_size": 232,
+      "declaration": "private readonly Dictionary<int, IEntityModel> _models",
+      "dump_line": 237992
+    },
+    "RR_OFF_BATTLE_SLOTS": {
+      "assembly": "Battle",
+      "type": "Game.Battle.BattleEntitiesModel",
+      "field": "_characterSlotModel",
+      "offset": 128,
+      "instance_size": 232,
+      "declaration": "private readonly ClientCharacterSlotsModel _characterSlotModel",
+      "dump_line": 238001
+    },
+    "RR_OFF_VIEWS_BATTLE": {
+      "assembly": "Battle",
+      "type": "Game.Battle.BattleEntitiesUpdater",
+      "field": "_battleEntitiesModel",
+      "offset": 24,
+      "instance_size": 376,
+      "declaration": "private readonly IBattleEntitiesModel _battleEntitiesModel",
+      "dump_line": 238387
+    },
+    "RR_OFF_VIEWS_MODEL": {
+      "assembly": "Battle",
+      "type": "Game.Battle.BattleEntitiesUpdater",
+      "field": "_battleModel",
+      "offset": 112,
+      "instance_size": 376,
+      "declaration": "private readonly BattleModel _battleModel",
+      "dump_line": 238398
+    },
+    "RR_OFF_VIEWS_CHARACTERS": {
+      "assembly": "Battle",
+      "type": "Game.Battle.BattleEntitiesUpdater",
+      "field": "_characterEntityViews",
+      "offset": 272,
+      "instance_size": 376,
+      "declaration": "private readonly Dictionary<int, BattleCharacterEntityView> _characterEntityViews",
+      "dump_line": 238418
+    },
+    "RR_OFF_VIEWS_CARS": {
+      "assembly": "Battle",
+      "type": "Game.Battle.BattleEntitiesUpdater",
+      "field": "_carEntityViews",
+      "offset": 280,
+      "instance_size": 376,
+      "declaration": "private readonly Dictionary<int, CarEntityView> _carEntityViews",
+      "dump_line": 238419
+    },
+    "RR_OFF_VIEWS_HELICOPTERS": {
+      "assembly": "Battle",
+      "type": "Game.Battle.BattleEntitiesUpdater",
+      "field": "_helicopterEntityViews",
+      "offset": 288,
+      "instance_size": 376,
+      "declaration": "private readonly Dictionary<int, HelicopterEntityView> _helicopterEntityViews",
+      "dump_line": 238420
+    },
+    "RR_OFF_AIM_BATTLE": {
+      "assembly": "Battle",
+      "type": "Game.Battle.Entities.Player.Updaters.BattleAimTargetUpdater",
+      "field": "_battleEntitiesModel",
+      "offset": 48,
+      "instance_size": 96,
+      "declaration": "private readonly IBattleEntitiesModel _battleEntitiesModel",
+      "dump_line": 329336
+    },
+    "RR_OFF_AIM_BRAIN": {
+      "assembly": "Battle",
+      "type": "Game.Battle.Entities.Player.Updaters.BattleAimTargetUpdater",
+      "field": "_cinemachineBrain",
+      "offset": 72,
+      "instance_size": 96,
+      "declaration": "private readonly CinemachineBrain _cinemachineBrain",
+      "dump_line": 329339
+    }
+  }
+}

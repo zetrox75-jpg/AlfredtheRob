@@ -1,0 +1,12 @@
+/* aio_launcher.rc - embedded payloads for RobRunAIO.exe.
+ *
+ * Paths are relative to this file, so the build works from any directory as
+ * long as the project layout is unchanged. Rebuild the payload binaries first
+ * (build_port.bat / build_driver.bat) if you want the AIO to carry new ones.
+ */
+#include "aio_resources.h"
+
+AIO_RCDATA_KD2      RCDATA "..\\1_run\\kd2.exe"
+AIO_RCDATA_DRIVER   RCDATA "..\\1_run\\kernel-mode.sys"
+AIO_RCDATA_OVERLAY  RCDATA "..\\1_run\\RobRunPort.exe"
+AIO_RCDATA_WEBVIEW2 RCDATA "..\\1_run\\WebView2Loader.dll"

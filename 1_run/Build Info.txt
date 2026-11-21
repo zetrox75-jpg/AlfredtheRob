@@ -1,0 +1,316 @@
+Build Info
+GameAssembly.dll size: 0x8FF3000 | timestamp: 0x6AFC1686
+UnityPlayer.dll size: 0x2426000 | timestamp: 0x6A28669F
+
+Static / Global Offsets
+GameObjectManager = UnityPlayer + 0x2230768
+
+Field Offsets
+
+// Core / Battle
+BattleModel
+PlayerRotationInput 0x40
+BattleEntitiesModel 0x90
+AimTargetModel 0x198
+BattleCameraModel 0x358
+BattleCharacterSlotsModel 0x4D0
+WorldEntitiesModel 0x518
+VoiceChatBattleRoomModel 0x630
+
+Game
+_startGameProcessor 0x98
+
+GameModel
+_battleModel 0x10
+
+GlobalModel
+_sensitivityModel 0x58
+
+UnityEntry
+_game 0x28
+
+
+// Camera / Aim / Input
+AimTargetModel
+CharacterId 0x10
+TargetType 0x14 // 3 = character
+
+BattleAimTargetUpdater
+_battleEntitiesModel 0x30
+_playerRotationInput 0x38
+_cinemachineBrain 0x48
+
+BattleCameraModel
+LookAtCameraOrientation 0x2C
+
+CameraState
+FieldOfView 0xB0
+Dutch 0xC0
+RawPosition 0xFC
+RawOrientation 0x108
+PositionCorrection 0x128
+OrientationCorrection 0x134
+
+CinemachineBrain
+mActiveCameraPreviousFrame 0xA0
+
+CinemachineVirtualCamera
+m_Lens 0xB8
+
+PlayerRotationInputModel
+_yaw 0x10
+_pitch 0x14
+
+SensitivityModel
+PlayerPreferenceValue 0x10
+PlayerPreferenceAimValue 0x14
+
+
+// Entities / Updaters
+BattleCharacterCommonData
+ItemInHands 0xB8
+
+BattleCharacterModel
+LookDirection 0x70
+SkeletonModel 0x138
+InVehicleModel 0x1C8
+StateModel 0x1E0
+
+BattleCharacterStateModel
+_characterHiddenStateModel 0x20
+
+BattleEntitiesModel
+_models 0x50
+_worldEntitiesModel 0x60
+_characterSlotModel 0x80
+_globalModel 0xB0
+
+BattleEntitiesUpdater
+_battleEntitiesModel 0x18
+_battleModel 0x70
+_characterEntityViews 0x110
+_carEntityViews 0x118
+_helicopterEntityViews 0x120
+
+BattleScreensUpdater
+_updaters 0x28
+
+BattleScreenUpdater
+_updater 0x18
+
+BattleUpdater
+_battleEntitiesUpdater 0x90
+
+CharacterHideObjectStateModel
+_hideObjectEntityIdData 0x10
+
+CompositeUpdater
+_updaters 0x10
+
+InVehicleModel
+_entityId 0x10
+_vehicleType 0x20
+
+LookDirectionModel
+_value 0x10
+_yaw 0x1C
+_pitch 0x20
+
+ScreenManager
+_currentUpdater 0x50
+
+StartGameProcessor
+_screenManager 0x20
+
+
+// World / Loot
+ContainerModel
+PositionModel 0x28
+
+DoorModel
+State 0x30
+Position 0x38
+
+DoorStateModel
+_state 0x10
+
+HideObjectModel
+_entityId 0x10
+Description 0x18
+
+InteractPositionModel
+X 0x10
+Y 0x14
+Z 0x18
+
+LocationHideObjectDescription
+EntityId 0x20
+Position 0x30
+Orientation 0x3C
+InteractPoint 0x4C
+
+LootModel
+InteractPositionModel 0x28
+
+PositionModel
+X 0x10
+Y 0x14
+Z 0x18
+
+VehicleLootModel
+InteractPositionModel 0x28
+
+WorldEntitiesModel
+_containers 0x20
+_loots 0x38
+_vehicleLoots 0x40
+_doors 0x48
+_cars 0x60
+_helicopters 0x68
+_hideObjects 0x1B0
+
+
+// Vehicles
+CarControlOwnerModel
+Driver 0x18
+
+CarDescription
+_physics 0xD0
+_handling 0xD8
+
+CarHandling
+ForwardMaxVelocity 0x10
+AccelerationWindowMaxVelocity 0x34
+HandBreakAcceleration 0x40
+
+CarModel
+Id 0x10
+OwnerRole 0x48
+ControlOwner 0x50
+Description 0x78
+TireFrictionSettings 0x88
+SteeringSettings 0x90
+TransmissionSettings 0x98
+Transform 0xC0
+Seats 0xE0
+
+CarPhysics
+GravityForce 0x30
+DownForceCoefficient 0x44
+
+CarSteeringDescription
+MaxSteeringAngle 0x20
+SteeringAngleChangeSpeed 0x30
+
+CarTireFrictionDescription
+FwFrictionStiffness 0x30
+BwFrictionStiffness 0x48
+
+CarTransmissionDescription
+DriveForceAcceleration 0x28
+BrakeForceAcceleration 0x30
+
+HelicopterModel
+Id 0x10
+Description 0x48
+Transform 0x70
+Seats 0x90
+OwnerRole 0xE8
+
+VehicleSeatData
+Occupied 0x20
+EntityId 0x28
+
+VehicleSeatsModel
+_data_1 0x10
+
+
+// Slots / Voice
+BattleCharacterSlotData
+EntityId 0x20
+Nickname 0x30
+EOSProductUserId 0x40
+
+BattleCharacterSlotModel
+_data_1 0x10
+Description 0x18
+
+BattleCharacterSlotsModel
+_slots 0x10
+
+VoiceChatBattleParticipantModel
+SlotDescription 0x38
+HideObjectEntityId 0x64
+
+VoiceChatParticipantsModel
+_participantStringIdToModels 0x18
+
+VoiceChatRoomModel
+ParticipantsModel 0x38
+
+VoiceChatRoomParticipantModel
+ProductUserIdString 0x18
+IsSpeaking 0x21
+
+Function RVAs
+
+// FOV / Camera
+0xDCFA68 brain push call (ProcessActiveCamera)
+0xDCFAF0 PushStateToUnityCamera
+0xDD1780 brain OutputCamera
+0x61F3340 Camera.GetFieldOfView
+
+// Aim / Rotation
+0xC4A800 PlayerRotationInputModel.SetRotation
+0x48A1EB0 raycast direction
+0x48A1F80 raycast hit position
+
+// Sky / Fog / Sun
+0x61F26E0 camera get clear colour
+0x61F2AE0 camera get clear flags
+0x61F5DB0 camera set clear colour
+0x61F6100 camera set clear flags
+0x6223D40 fog get
+0x6224060 sun object
+0x62246F0 fog set
+0x62252D0 skybox get material
+0x6225B30 skybox set material
+0x62381A0 light get intensity
+0x6239FB0 light set intensity
+
+// Mesh / Materials / Textures
+0x6241600 material HasProperty
+0x6245340 material SetTexture
+0x62468F0 material get shader
+0x6253110 mesh recalc bounds
+0x625AE60 mesh clear
+0x625C4E0 mesh set vertices
+0x625C670 mesh set triangles
+0x625CA70 mesh set uv
+0x625CBA0 mesh set normals
+0x6275720 texture ctor
+0x630F7A0 image load sprite
+
+// GameObjects / Transforms
+0x452BC60 transform set look
+0x6226280 get bool property
+0x6227000 renderer enable / disable
+0x6229FC0 get ref (variant)
+0x6245C20 set ref (variant)
+0x6248D60 set ref (variant)
+0x6290490 gameobject get child
+0x6290D90 component get ref
+0x6290F10 parent get ref
+0x6298EB0 gameobject add component
+0x629AC00 gameobject get children
+0x629CAD0 set ref
+0x629D580 get ref
+0x62A0DC0 gameobject SetActive
+0x62A1470 camera / skybox chain
+0x62E1340 transform set parent
+0x62E3960 transform get position
+0x62E3B60 renderer get colour
+
+// Menu / Cursor
+0xF15C00 cursor lock add
+0xF15C70 cursor lock remove

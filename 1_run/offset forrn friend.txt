@@ -1,0 +1,1709 @@
+# Rob Run — IL2CPP Dump SDK Reference
+
+**Game**: Rob Run  
+**Metadata version**: v39 (Unity 2023.x)  
+**Dump date**: 2026-11-17  
+
+---
+
+## WorldModel
+
+**Namespace**: `Models.Models.WorldModel`  
+**TypeDefIndex**: 3322  
+
+| Field | Offset |
+|---|---|
+| `Location` | `0x10` |
+| `Grids` | `0x18` |
+| `ContentCache` | `0x20` |
+| `PhysicsScene` | `0x28` |
+| `BattleDataCollections` | `0x30` |
+| `WorldEntitiesModel` | `0x38` |
+| `PhysicsBodies` | `0x40` |
+| `Teleport` | `0x48` |
+| `Event` | `0x50` |
+| `SafeZone` | `0x58` |
+| `Vehicles` | `0x60` |
+| `WaterZones` | `0x68` |
+| `WorldInterruptModel` | `0x70` |
+| `RaycastModel` | `0x78` |
+| `SphereCastModel` | `0x80` |
+| `ChangeSubscribeEntityModel` | `0x88` |
+| `InteractRaycastModel` | `0x90` |
+| `PhysicsBroadPhaseCallback` | `0x98` |
+| `PhysicsNarrowPhaseCallback` | `0xA0` |
+
+## VehiclesWorldModel
+
+**Namespace**: `Models.Models.WorldModel.VehiclesWorld`  
+**TypeDefIndex**: 3323  
+
+| Field | Offset |
+|---|---|
+| `_worldEntitiesModel` | `0x10` |
+| `_physicsSceneModel` | `0x18` |
+| `_safeZone` | `0x20` |
+| `_parties` | `0x28` |
+| `_changeSubscribeEntityModel` | `0x30` |
+| `_battleMode` | `0x38` |
+| `_clanBattleCharacterTeamModel` | `0x40` |
+| `_occupiedCharacterSlotsModel` | `0x48` |
+| `_partiesVehiclesModel` | `0x50` |
+| `_vehicleMapTransformUpdateModel` | `0x58` |
+| `_partiesUnreleasedSlotsModel` | `0x60` |
+| `_worldInterruptModel` | `0x68` |
+| `_ownedVehiclesModel` | `0x70` |
+
+## WorldEntitiesModel
+
+**Namespace**: `Models.Models.WorldEntities`  
+**TypeDefIndex**: 3337  
+
+| Field | Offset |
+|---|---|
+| `_notSpawnedBattleCharacters` | `0x10` |
+| `_battleCharacters` | `0x18` |
+| `_containers` | `0x20` |
+| `_accessEntities` | `0x28` |
+| `_securityAlarms` | `0x30` |
+| `_loots` | `0x38` |
+| `_vehicleLoots` | `0x40` |
+| `_doors` | `0x48` |
+| `_kinematicObjectsControllers` | `0x50` |
+| `_vehicles` | `0x58` |
+| `_cars` | `0x60` |
+| `_helicopters` | `0x68` |
+| `_breakableColliderSets` | `0x70` |
+| `_openCloseRequests` | `0x78` |
+| `_unlockEntities` | `0x80` |
+| `_breachEntities` | `0x88` |
+| `_metalDetectors` | `0x90` |
+| `_staticLootObjects` | `0x98` |
+| `_randomLootObjects` | `0xA0` |
+| `_interactEntities` | `0xA8` |
+| `_lootNodes` | `0xB0` |
+| `_securityPanels` | `0xB8` |
+| `_vehicleTrunks` | `0xC0` |
+| `_cargos` | `0xC8` |
+| `_collectionCargos` | `0xD0` |
+| `_collections` | `0xD8` |
+| `_cargoOpenWorkbenches` | `0xE0` |
+| `_cargoOpenWorkbenchSlots` | `0xE8` |
+| `_cargoExchangeWorkbenches` | `0xF0` |
+| `_cargoExchangeWorkbenchSlots` | `0xF8` |
+| `_buildingCargos` | `0x100` |
+| `_subscribeEntities` | `0x108` |
+| `_safeDoors` | `0x110` |
+| `_safeClosePanels` | `0x118` |
+| `_vigilantNpc` | `0x120` |
+| `_storages` | `0x128` |
+| `_storageInventories` | `0x130` |
+| `_plotContainerInventories` | `0x138` |
+| `_plotContainers` | `0x140` |
+| `_shelvings` | `0x148` |
+| `_plots` | `0x150` |
+| `_moneyWorkbenches` | `0x158` |
+| `_lootInventories` | `0x160` |
+| `_containerInventories` | `0x168` |
+| `_vehicleLootInventories` | `0x170` |
+| `_cargoOpenWorkbenchSlotInventories` | `0x178` |
+| `_bollards` | `0x180` |
+| `_vehicleSpawnerModel` | `0x188` |
+| `_buildings` | `0x190` |
+| `_enterLeaveVehicleRequests` | `0x198` |
+| `_grenades` | `0x1A0` |
+| `_cargoInventorySlots` | `0x1A8` |
+| `_hideObjects` | `0x1B0` |
+| `_cargoExchangers` | `0x1B8` |
+| `_playerObservers` | `0x1C0` |
+| `_settlementCashModels` | `0x1C8` |
+| `_plotVehicles` | `0x1D0` |
+| `_plotCars` | `0x1D8` |
+| `_plotHelicopters` | `0x1E0` |
+| `_plotVehicleTrunks` | `0x1E8` |
+| `_vehicleTrunkInventories` | `0x1F0` |
+| `_plotBuilderSlots` | `0x1F8` |
+| `_carGarages` | `0x200` |
+| `_helicopterGarages` | `0x208` |
+| `_locationDoors` | `0x210` |
+| `_builderDoors` | `0x218` |
+| `_furnitureLoots` | `0x220` |
+| `_furnitureLootEntityInventories` | `0x228` |
+| `_furnitureLootInventories` | `0x230` |
+| `_buildingLoots` | `0x238` |
+| `_builderLootEntityInventories` | `0x240` |
+| `_builderLootInventories` | `0x248` |
+| `_windowBlindsModel` | `0x250` |
+| `_cumulativeChargersModel` | `0x258` |
+| `_locationEventCargoSpawnPoints` | `0x260` |
+| `_cashLootNodes` | `0x268` |
+| `_pointsOfInterest` | `0x270` |
+| `_defenseBlockPublicModels` | `0x278` |
+| `_defenseBlockPrivateModels` | `0x280` |
+| `_waterZones` | `0x288` |
+| `_firstAidCabinetModels` | `0x290` |
+| `_holdingCells` | `0x298` |
+| `_buyers` | `0x2A0` |
+| `_buyerInventories` | `0x2A8` |
+| `_copEquipBoxes` | `0x2B0` |
+| `_copRewardBoxes` | `0x2B8` |
+| `_cargoProductionWorkbenches` | `0x2C0` |
+| `_cargoProductionWorkbenchResultCargoSlots` | `0x2C8` |
+| `_cargoChargeWorkbenches` | `0x2D0` |
+| `_cryptoWorkbenchPublicModels` | `0x2D8` |
+| `_cryptoWorkbenchPrivateModels` | `0x2E0` |
+| `_architectTables` | `0x2E8` |
+| `_plotLoots` | `0x2F0` |
+| `_plotLaunderingCables` | `0x2F8` |
+| `_personalRepositoryModels` | `0x300` |
+| `_policeBadgeRepositoryModels` | `0x308` |
+| `_lootableObjectGroups` | `0x310` |
+| `_bots` | `0x318` |
+| `_alarmLocationDescription` | `0x320` |
+| `_locationContainers` | `0x328` |
+| `_locationBreakableColliderSets` | `0x330` |
+| `_breakableColliderModels` | `0x338` |
+| `_vigilantNpcBuildings` | `0x340` |
+| `_buildingsByLootNodes` | `0x348` |
+| `_buildingsByCumulativeChargers` | `0x350` |
+| `_lootObjectsBuildings` | `0x358` |
+| `_cargoBuildings` | `0x360` |
+| `_safeDoorBuildings` | `0x368` |
+| `_securityAlarmBuildings` | `0x370` |
+| `_locationBuildings` | `0x378` |
+| `_slotPlotModels` | `0x380` |
+| `_plotSlotByEntity` | `0x388` |
+| `_containerByInventory` | `0x390` |
+| `_buyerByInventory` | `0x398` |
+| `_cargoOpenWorkbenchSlotByInventory` | `0x3A0` |
+| `_storageByInventory` | `0x3A8` |
+| `_plotContainerByInventory` | `0x3B0` |
+| `_cargoOpenWorkbenchBySlot` | `0x3B8` |
+| `_npcDescriptions` | `0x3C0` |
+| `_cargoInventorySlotIds` | `0x3C8` |
+| `_vehicleTrunkInventoriesModelByCargoInventorySlot` | `0x3D0` |
+| `_vehicleLootInventoryByCargoInventorySlot` | `0x3D8` |
+| `_cargoSellers` | `0x3E0` |
+| `_planningBoardDescriptions` | `0x3E8` |
+| `_outbuildingByPlotCar` | `0x3F0` |
+| `_outbuildingByPlotHelicopter` | `0x3F8` |
+| `_outbuildingByCargoProductionWorkbench` | `0x400` |
+| `_furnitureLootInventoryByPageInventory` | `0x408` |
+| `_furnitureLootInventoryByCargoInventorySlot` | `0x410` |
+| `_builderLootInventoryByPageInventory` | `0x418` |
+| `_builderLootInventoryByCargoInventorySlot` | `0x420` |
+| `_buildingLootByInventory` | `0x428` |
+| `_builderLootInventoryOwnerPositions` | `0x430` |
+| `_plotBuilderSlotsEntityIdToParentSlotsEntityId` | `0x438` |
+| `_shelvingByCargoInventorySlot` | `0x440` |
+| `_defenseBlockPublicModelsByEntity` | `0x448` |
+| `_barterTraders` | `0x450` |
+| `_characterLaunderers` | `0x458` |
+| `_cashWithdrawal` | `0x460` |
+| `_bankManagers` | `0x468` |
+| `_cargoProductionWorkbenchByResultCargoSlot` | `0x470` |
+| `_rouletteModels` | `0x478` |
+| `NotSpawnedBattleCharacters` | `0x480` |
+| `BattleCharacters` | `0x488` |
+| `Containers` | `0x490` |
+| `AccessEntities` | `0x498` |
+| `Loots` | `0x4A0` |
+| `VehicleLoots` | `0x4A8` |
+| `Doors` | `0x4B0` |
+| `KinematicObjectsControllers` | `0x4B8` |
+| `Vehicles` | `0x4C0` |
+| `Cars` | `0x4C8` |
+| `Helicopters` | `0x4D0` |
+| `BreakableColliderSets` | `0x4D8` |
+| `Buildings` | `0x4E0` |
+| `MetalDetectors` | `0x4E8` |
+| `StaticLootObjects` | `0x4F0` |
+| `RandomLootObjects` | `0x4F8` |
+| `LootNodes` | `0x500` |
+| `SecurityPanels` | `0x508` |
+| `VehicleTrunks` | `0x510` |
+| `Cargos` | `0x518` |
+| `CollectionCargos` | `0x520` |
+| `Collections` | `0x528` |
+| `MoneyWorkbenches` | `0x530` |
+| `CargoOpenWorkbenches` | `0x538` |
+| `CargoOpenWorkbenchSlots` | `0x540` |
+| `CargoExchangeWorkbenches` | `0x548` |
+| `CargoExchangeWorkbenchSlots` | `0x550` |
+| `BuildingCargos` | `0x558` |
+| `Storages` | `0x560` |
+| `StorageInventories` | `0x568` |
+| `PlotContainerInventories` | `0x570` |
+| `PlotContainers` | `0x578` |
+| `Shelvings` | `0x580` |
+| `HideObjects` | `0x588` |
+| `PlayerObservers` | `0x590` |
+| `OpenCloseRequests` | `0x598` |
+| `UnlockEntities` | `0x5A0` |
+| `BreachEntities` | `0x5A8` |
+| `EnterLeaveVehicleRequests` | `0x5B0` |
+| `InteractEntities` | `0x5B8` |
+| `SubscribeEntities` | `0x5C0` |
+| `SafeDoors` | `0x5C8` |
+| `SafeClosePanels` | `0x5D0` |
+| `VigilantNpc` | `0x5D8` |
+| `SecurityAlarms` | `0x5E0` |
+| `Plots` | `0x5E8` |
+| `LootInventories` | `0x5F0` |
+| `ContainerInventories` | `0x5F8` |
+| `VehicleLootInventories` | `0x600` |
+| `CargoOpenWorkbenchSlotInventories` | `0x608` |
+| `Bollards` | `0x610` |
+| `VehicleSpawners` | `0x618` |
+| `Grenades` | `0x620` |
+| `CargoInventorySlots` | `0x628` |
+| `CargoExchangers` | `0x630` |
+| `PlotBuilderSlots` | `0x638` |
+| `BuildingLootByInventory` | `0x640` |
+| `PlotBuilderSlotsEntityIdToParentSlotsEntityId` | `0x648` |
+| `SettlementCashModels` | `0x650` |
+| `PlotVehicles` | `0x658` |
+| `PlotCars` | `0x660` |
+| `PlotHelicopters` | `0x668` |
+| `PlotVehicleTrunks` | `0x670` |
+| `VehicleTrunkInventories` | `0x678` |
+| `CarGarages` | `0x680` |
+| `HelicopterGarages` | `0x688` |
+| `LocationDoors` | `0x690` |
+| `BuilderDoors` | `0x698` |
+| `FurnitureLoots` | `0x6A0` |
+| `FurnitureLootEntityInventories` | `0x6A8` |
+| `FurnitureLootInventories` | `0x6B0` |
+| `BuildingLoots` | `0x6B8` |
+| `BuilderLootEntityInventories` | `0x6C0` |
+| `BuilderLootInventories` | `0x6C8` |
+| `CumulativeChargers` | `0x6D0` |
+| `WaterZones` | `0x6D8` |
+| `LocationEventCargoSpawnPoints` | `0x6E0` |
+| `CashLootNodes` | `0x6E8` |
+| `PointsOfInterest` | `0x6F0` |
+| `DefenseBlockPublicModels` | `0x6F8` |
+| `DefenseBlockPrivateModels` | `0x700` |
+| `DefenseBlockPublicModelsByEntity` | `0x708` |
+| `FirstAidCabinetModels` | `0x710` |
+| `HoldingCells` | `0x718` |
+| `Buyers` | `0x720` |
+| `BuyerInventories` | `0x728` |
+| `CopEquipBoxes` | `0x730` |
+| `CopRewardBoxes` | `0x738` |
+| `CargoProductionWorkbenches` | `0x740` |
+| `CargoProductionWorkbenchResultCargoSlots` | `0x748` |
+| `CargoChargeWorkbenches` | `0x750` |
+| `CryptoWorkbenchPublicModels` | `0x758` |
+| `CryptoWorkbenchPrivateModels` | `0x760` |
+| `ArchitectTables` | `0x768` |
+| `PlotLoots` | `0x770` |
+| `PlotLaunderingCables` | `0x778` |
+| `PersonalRepositories` | `0x780` |
+| `PoliceBadgeRepositories` | `0x788` |
+| `LootableObjectGroups` | `0x790` |
+| `LocationContainers` | `0x798` |
+| `LocationBreakableColliderSets` | `0x7A0` |
+| `BreakableColliderModels` | `0x7A8` |
+| `LocationSecurityAlarms` | `0x7B0` |
+| `VigilantNpcBuildings` | `0x7B8` |
+| `BuildingsByLootNodes` | `0x7C0` |
+| `BuildingsByCumulativeChargers` | `0x7C8` |
+| `LootObjectsBuildings` | `0x7D0` |
+| `CargoBuildings` | `0x7D8` |
+| `SafeDoorBuildings` | `0x7E0` |
+| `SecurityAlarmBuildings` | `0x7E8` |
+| `LocationBuildings` | `0x7F0` |
+| `SlotPlotModels` | `0x7F8` |
+| `PlotSlotByEntity` | `0x800` |
+| `ContainerByInventory` | `0x808` |
+| `BuyerByInventory` | `0x810` |
+| `CargoOpenWorkbenchSlotByInventory` | `0x818` |
+| `StorageByInventory` | `0x820` |
+| `PlotContainerByInventory` | `0x828` |
+| `CargoOpenWorkbenchBySlot` | `0x830` |
+| `NpcDescriptions` | `0x838` |
+| `CargoInventorySlotIds` | `0x840` |
+| `VehicleTrunkInventoriesModelByCargoInventorySlot` | `0x848` |
+| `VehicleLootInventoryByCargoInventorySlot` | `0x850` |
+| `CargoSellers` | `0x858` |
+| `PlanningBoardDescriptions` | `0x860` |
+| `OutbuildingByPlotCar` | `0x868` |
+| `OutbuildingByPlotHelicopter` | `0x870` |
+| `OutbuildingByCargoProductionWorkbench` | `0x878` |
+| `FurnitureLootInventoryByPageInventory` | `0x880` |
+| `FurnitureLootInventoryByCargoInventorySlot` | `0x888` |
+| `BuilderLootInventoryByPageInventory` | `0x890` |
+| `BuilderLootInventoryByCargoInventorySlot` | `0x898` |
+| `ShelvingByCargoInventorySlot` | `0x8A0` |
+| `BarterTraders` | `0x8A8` |
+| `CharacterLaunderers` | `0x8B0` |
+| `CashWithdrawal` | `0x8B8` |
+| `BankManagers` | `0x8C0` |
+| `CargoProductionWorkbenchByResultCargoSlot` | `0x8C8` |
+| `RouletteModels` | `0x8D0` |
+
+## Parties
+
+**Namespace**: `Models.Models.Parties`  
+**TypeDefIndex**: 3739  
+
+| Field | Offset |
+|---|---|
+| `_parties` | `0x10` |
+| `_partiesByEntity` | `0x18` |
+
+## PartyModel
+
+**Namespace**: `Models.Models.Party`  
+**TypeDefIndex**: 3736  
+
+| Field | Offset |
+|---|---|
+| `_entities` | `0x10` |
+| `_memberPublicIds` | `0x18` |
+| `Id` | `0x20` |
+| `Data` | `0x28` |
+| `EnterGroup` | `0x30` |
+| `Entities` | `0x38` |
+| `MemberPublicIds` | `0x40` |
+| `Vehicles` | `0x48` |
+| `WantedPoints` | `0x50` |
+| `BecomeRobberReadyCheckModel` | `0x58` |
+| `RobberAuthority` | `0x60` |
+| `CopRecruitingReadyCheckModel` | `0x68` |
+| `ShooterTeammatesJoinEndTs` | `0x70` |
+
+## PartyModel
+
+**Namespace**: `Game.Global.Party`  
+**TypeDefIndex**: 10447  
+
+| Field | Offset |
+|---|---|
+| `_partyData` | `0x10` |
+| `_partyInviteModels` | `0x18` |
+| `_partyIncomingInviteModels` | `0x20` |
+| `_partyMemberModels` | `0x28` |
+| `_actualPartyInviteModels` | `0x30` |
+| `_actualPartyMemberModels` | `0x38` |
+| `_actualMembersAddedOrderList` | `0x40` |
+| `_removedMembers` | `0x48` |
+| `_emptyPartyMembers` | `0x50` |
+| `_regionUserPartyData` | `0x58` |
+| `HasParty` | `0x60` |
+| `IsAllMembersInRealm` | `0x61` |
+| `IsAllMembersNotInRealm` | `0x62` |
+| `MembersInLocationCount` | `0x64` |
+| `PlayerPartyModel` | `0x68` |
+| `BecomeRobberReadyCheckEndTs` | `0x70` |
+| `BecomeRobberReadyCheckEntityId` | `0x78` |
+| `CopRecruitingReadyCheckEndTs` | `0x80` |
+| `Vehicles` | `0x88` |
+| `PartyLogsSource` | `0x90` |
+| `IsPlayerJoinPartyChatNotificationDuringThisSession` | `0x98` |
+
+## BattleCharacterModel
+
+**Namespace**: `Models.Models.BattleCharacter`  
+**TypeDefIndex**: 4311  
+
+| Field | Offset |
+|---|---|
+| `PrivateModel` | `0x10` |
+| `Events` | `0x18` |
+| `GroundedEvent` | `0x20` |
+| `SwimmingStartEvent` | `0x28` |
+| `EnteredDeepWaterEvent` | `0x30` |
+| `Id` | `0x38` |
+| `Data` | `0x40` |
+| `Config` | `0x48` |
+| `BodyIdModel` | `0x50` |
+| `Transform` | `0x58` |
+| `ReplicatedTransform` | `0x60` |
+| `LastPositionModel` | `0x68` |
+| `LookDirection` | `0x70` |
+| `ReplicatedLookDirection` | `0x78` |
+| `TurningModel` | `0x80` |
+| `LastLookDirection` | `0x88` |
+| `InputsModel` | `0x90` |
+| `Input` | `0x98` |
+| `LastInput` | `0xA0` |
+| `MoveInput` | `0xA8` |
+| `LookDirectionInput` | `0xB0` |
+| `Velocity` | `0xB8` |
+| `FireModel` | `0xC0` |
+| `CharacterControllerState` | `0xC8` |
+| `CharacterControllerGroundModel` | `0xD0` |
+| `GroundConstraintsModel` | `0xD8` |
+| `WaterConstraintsModel` | `0xE0` |
+| `CharacterControllerWaterModel` | `0xE8` |
+| `IsDead` | `0xF0` |
+| `ShotArgsModel` | `0xF8` |
+| `ShotResultModel` | `0x100` |
+| `ShotInterpolationModel` | `0x108` |
+| `DamageImmuneModel` | `0x110` |
+| `MoveDirectionModel` | `0x118` |
+| `HitBoxAccess` | `0x120` |
+| `HitBoxId` | `0x128` |
+| `SkeletonAnimationModel` | `0x130` |
+| `SkeletonModel` | `0x138` |
+| `Animator` | `0x140` |
+| `IsSprintingModel` | `0x148` |
+| `Weapon` | `0x150` |
+| `WeaponReload` | `0x158` |
+| `CrouchModel` | `0x160` |
+| `QuickSlotSelectProgress` | `0x168` |
+| `ItemInHandsModel` | `0x170` |
+| `ExitModel` | `0x178` |
+| `CharacterSpeedModel` | `0x180` |
+| `ItemActionProcess` | `0x188` |
+| `ThrowItem` | `0x190` |
+| `PhysicsContactEvents` | `0x198` |
+| `UsableItemModel` | `0x1A0` |
+| `ThrowableItemModel` | `0x1A8` |
+| `EnterLeaveVehicleRequestModel` | `0x1B0` |
+| `HasArmor` | `0x1B8` |
+| `WeaponClickTickIndex` | `0x1C0` |
+| `InVehicleModel` | `0x1C8` |
+| `CarInput` | `0x1D0` |
+| `HelicopterInput` | `0x1D8` |
+| `StateModel` | `0x1E0` |
+| `RigidBodyEnabled` | `0x1E8` |
+| `BattleStanceModel` | `0x1F0` |
+| `ArmedModel` | `0x1F8` |
+| `IsBackgroundReload` | `0x200` |
+| `Role` | `0x208` |
+| `RestoreHealthModel` | `0x210` |
+| `ChangeRoleTickIndexModel` | `0x218` |
+| `DeserterModel` | `0x220` |
+| `DesiredYawModel` | `0x228` |
+| `CustomizationModel` | `0x230` |
+| `CustomizationVersionModel` | `0x238` |
+| `AoiModel` | `0x240` |
+| `SurrenderCommandModel` | `0x248` |
+| `ArrestTargetModel` | `0x250` |
+| `PlayerBattleModel` | `0x258` |
+| `BecomeRobberModel` | `0x260` |
+| `RobberInventoryCostModel` | `0x268` |
+| `ThreatenTs` | `0x270` |
+| `LootNotification` | `0x278` |
+| `ShotDebugInfoModel` | `0x280` |
+| `MeleeAttackModel` | `0x288` |
+| `CenterPosition` | `0x290` |
+| `KnockoutModel` | `0x298` |
+| `RevivalModel` | `0x2A0` |
+| `SubscribeEntities` | `0x2A8` |
+| `RoleTimeModel` | `0x2B0` |
+| `ClientNotifications` | `0x2B8` |
+| `BreakColliderModel` | `0x2C0` |
+| `CopCustomizeModel` | `0x2C8` |
+| `KnockdownModel` | `0x2D0` |
+| `KnockdownLeaveStateModel` | `0x2D8` |
+| `EmotionModel` | `0x2E0` |
+| `CargoModel` | `0x2E8` |
+| `ValidationModel` | `0x2F0` |
+| `BlindedEffectModel` | `0x2F8` |
+| `YawTowardsWorldObjectsModel` | `0x300` |
+| `CurrentWeaponSkin` | `0x308` |
+| `SurrenderStateModel` | `0x310` |
+| `CapsuleColliderParams` | `0x318` |
+| `ImmuneStateModel` | `0x320` |
+| `IsLeftShoulderView` | `0x328` |
+| `HasMovementIntention` | `0x330` |
+| `BribeModel` | `0x338` |
+| `ProlongedInteractionModel` | `0x340` |
+| `TimeFalling` | `0x348` |
+
+## BattleCharacterData
+
+**Namespace**: `Models.Data`  
+**TypeDefIndex**: 4891  
+
+| Field | Offset |
+|---|---|
+| `CommonData` | `0x20` |
+| `PrivateData` | `0x28` |
+| `PublicData` | `0x30` |
+
+## BattleCharacterCommonData
+
+**Namespace**: `Models.Data`  
+**TypeDefIndex**: 4890  
+
+| Field | Offset |
+|---|---|
+| `Role` | `0x20` |
+| `Position` | `0x28` |
+| `LookDirection` | `0x30` |
+| `Rx` | `0x38` |
+| `Ry` | `0x40` |
+| `Rz` | `0x48` |
+| `TurningStartTs` | `0x50` |
+| `TurningToLeft` | `0x58` |
+| `TurningOriginalYaw` | `0x60` |
+| `IsFiring` | `0x68` |
+| `ShotEndTs` | `0x70` |
+| `CharacterControllerState` | `0x78` |
+| `GroundSurfaceType` | `0x80` |
+| `IsSprinting` | `0x88` |
+| `ReloadState` | `0x90` |
+| `ReloadEndTs` | `0x98` |
+| `IsBackgroundReload` | `0xA0` |
+| `IsCrouching` | `0xA8` |
+| `CrouchTransitionEndTs` | `0xB0` |
+| `ItemInHands` | `0xB8` |
+| `QuickSlotSelectTs` | `0xC0` |
+| `ItemActionType` | `0xC8` |
+| `ItemActionCastProcess` | `0xD0` |
+| `ItemActionProcessEndTs` | `0xD8` |
+| `IsDead` | `0xE0` |
+| `WeaponClickTickIndex` | `0xE8` |
+| `VehicleEntityId` | `0xF0` |
+| `VehicleSeatSlot` | `0xF8` |
+| `BattleStance` | `0x100` |
+| `IsArmed` | `0x108` |
+| `Customization` | `0x110` |
+| `CustomizationVersion` | `0x118` |
+| `SurrenderTs` | `0x120` |
+| `SurrenderCommandTs` | `0x128` |
+| `ArrestTs` | `0x130` |
+| `ArrestState` | `0x138` |
+| `UncuffBySomeoneTs` | `0x140` |
+| `ThreatenTs` | `0x148` |
+| `MeleeAttackHitTs` | `0x150` |
+| `KnockoutEndTs` | `0x158` |
+| `KnockoutPhase` | `0x160` |
+| `KnockoutHitDirectionSectorIndex` | `0x168` |
+| `ReviveEndTs` | `0x170` |
+| `BreakColliderHitTs` | `0x178` |
+| `CopCustomize` | `0x180` |
+| `KnockdownEndTs` | `0x188` |
+| `IsKnockedForward` | `0x190` |
+| `EmotionEndTs` | `0x198` |
+| `Emotion` | `0x1A0` |
+| `ProlongedInteractionEntityId` | `0x1A8` |
+| `ProlongedInteractionEndTs` | `0x1B0` |
+| `MutuallyExclusiveProcess` | `0x1B8` |
+| `Cargo` | `0x1C0` |
+| `BlindedEffect` | `0x1C8` |
+| `CurrentWeaponSkin` | `0x1D0` |
+| `AnimatorState` | `0x1D8` |
+| `AnimatorLastMotionTime` | `0x1E0` |
+| `AnimatorNativeMotionTimeLastUpdateTs` | `0x1E8` |
+| `AnimatorNativeMotionTimeDuration` | `0x1F0` |
+| `AnimatorNativeMotionTimeValueQuantized` | `0x1F8` |
+| `ImmuneEndTs` | `0x200` |
+| `IsLeftShoulderView` | `0x208` |
+| `HasMovementIntention` | `0x210` |
+| `BribeCoinsAmount` | `0x218` |
+| `TimeFalling` | `0x220` |
+
+## BattleCharacterPrivateData
+
+**Namespace**: `(none)`  
+**TypeDefIndex**: 4892  
+
+*No fields with offsets.*
+
+## BattleCharacterPrivateData
+
+**Namespace**: `Models.Data`  
+**TypeDefIndex**: 4893  
+
+| Field | Offset |
+|---|---|
+| `InventoryItems` | `0x20` |
+| `EquipSlotsDelays` | `0x28` |
+| `EquipIntentionAfterEquipDelay` | `0x30` |
+| `Health` | `0x38` |
+| `IndexRollback` | `0x40` |
+| `DamageData` | `0x48` |
+| `SprintTransitionEndTs` | `0x50` |
+| `SprintCooldownEndTs` | `0x58` |
+| `ReloadIntention` | `0x60` |
+| `TargetAiming` | `0x68` |
+| `Aiming` | `0x70` |
+| `AimStateEndTs` | `0x78` |
+| `AimCooldownEndTs` | `0x80` |
+| `AimState` | `0x88` |
+| `AimMode` | `0x90` |
+| `HitsMask` | `0x98` |
+| `HitsTs` | `0xA0` |
+| `NonLethalHitTs` | `0xA8` |
+| `Seed` | `0xB0` |
+| `WeaponSpread` | `0xB8` |
+| `CrouchIntention` | `0xC0` |
+| `SelectedQuickSlot` | `0xC8` |
+| `CheatSprintEnabled` | `0xD0` |
+| `MovementInertiaDisabledByCheat` | `0xD8` |
+| `VehicleLeaveTs` | `0xE0` |
+| `ContextMenuUseItemActionType` | `0xE8` |
+| `ItemUseRememberedQuickSlot` | `0xF0` |
+| `ItemUseTargetInventorySlot` | `0xF8` |
+| `InventoryUseItemTs` | `0x100` |
+| `ParamItemActionType` | `0x108` |
+| `ParamSourceInventorySlot` | `0x110` |
+| `ParamSourcePocketSlot` | `0x118` |
+| `ParamTargetInventorySlot` | `0x120` |
+| `ParamTargetEquipSlot` | `0x128` |
+| `CopInfo` | `0x130` |
+| `HideObjectEntityId` | `0x138` |
+| `SurrenderCooldownTs` | `0x140` |
+| `TeleportTs` | `0x148` |
+| `InteractEntityId` | `0x150` |
+| `LastQuickSlot` | `0x158` |
+| `IsLastQuickSlotEmptyHands` | `0x160` |
+| `FallDamageTrackActive` | `0x168` |
+| `FallDamageTrackStartPositionY` | `0x170` |
+| `UsableItemCooldown` | `0x178` |
+| `ThrowableItemCooldown` | `0x180` |
+| `TimeEffects` | `0x188` |
+| `LastBlindedStateStartTickIndex` | `0x190` |
+| `MainMenuExitTs` | `0x198` |
+| `MainMenuExitReason` | `0x1A0` |
+| `CharacterControllerData` | `0x1A8` |
+| `CharacterControllerWaterZoneEntityIdByCollision` | `0x1B0` |
+| `DamageZoneEffect` | `0x1B8` |
+| `StaminaDirectionChangeTs` | `0x1C0` |
+| `StaminaDirectionChangeAmount` | `0x1C8` |
+| `StaminaDecreaseDirection` | `0x1D0` |
+| `DetentionPoints` | `0x1D8` |
+| `DetentionPointDecreaseTs` | `0x1E0` |
+
+## BattleCharacterPublicData
+
+**Namespace**: `Models.Data`  
+**TypeDefIndex**: 4894  
+
+| Field | Offset |
+|---|---|
+| `ShotPosition` | `0x20` |
+| `ShotDirection` | `0x28` |
+| `ShotWeapon` | `0x30` |
+| `HasArmor` | `0x38` |
+| `VehicleType` | `0x40` |
+| `MeleeAttackSurfaceHit` | `0x48` |
+
+## BattleCharacterPrivateModel
+
+**Namespace**: `Models.Models.BattleCharacterPrivate`  
+**TypeDefIndex**: 4300  
+
+| Field | Offset |
+|---|---|
+| `ShotInput` | `0x10` |
+| `ShotEvent` | `0x18` |
+| `DamagedEvent` | `0x20` |
+| `WeaponReloadEvent` | `0x28` |
+| `JumpInput` | `0x30` |
+| `SelectNotEmptyQuickSlotEvent` | `0x38` |
+| `LeaveEvent` | `0x40` |
+| `LeaveHideObjectEvent` | `0x48` |
+| `SurrenderCommandEvent` | `0x50` |
+| `FinishArrestEvent` | `0x58` |
+| `BecomeRobberEvent` | `0x60` |
+| `WarpedEvent` | `0x68` |
+| `MeleeAttackEvent` | `0x70` |
+| `ForceKnockoutEndEvent` | `0x78` |
+| `DropCargoEvent` | `0x80` |
+| `SuicideEvent` | `0x88` |
+| `KnockedOutByFallDamage` | `0x90` |
+| `RespawnRequest` | `0x98` |
+| `InventoryUseItemRequest` | `0xA0` |
+| `TeleportRequest` | `0xA8` |
+| `SprintRequest` | `0xB0` |
+| `CrouchRequest` | `0xB8` |
+| `SelectQuickSlotRequest` | `0xC0` |
+| `ItemActionRequest` | `0xC8` |
+| `UseEntityRequest` | `0xD0` |
+| `RemoveRequest` | `0xD8` |
+| `TeleportIntoHideObject` | `0xE0` |
+| `TeleportOutOfHideObject` | `0xE8` |
+| `SurrenderRequest` | `0xF0` |
+| `InteractRequest` | `0xF8` |
+| `KnockdownRequest` | `0x100` |
+| `FallDamageTrackRequest` | `0x108` |
+| `FallDamageRequest` | `0x110` |
+| `ThrowGrenadeRequest` | `0x118` |
+| `PutCargoInInventoryRequest` | `0x120` |
+| `AimModeRequest` | `0x128` |
+| `LeftShoulderViewRequest` | `0x130` |
+| `EmotionRequest` | `0x138` |
+| `CargoProductionWorkbenchInputRequest` | `0x140` |
+| `ProlongedInteractionRequest` | `0x148` |
+| `Inventory` | `0x150` |
+| `EquipSlots` | `0x158` |
+| `EquipAmmo` | `0x160` |
+| `InitArmorModel` | `0x168` |
+| `Pockets` | `0x170` |
+| `Armor` | `0x178` |
+| `EquipSlotsDelays` | `0x180` |
+| `TakeInHandsIntentionOnEquipDelayEnds` | `0x188` |
+| `SelectedQuickSlot` | `0x190` |
+| `Magazine` | `0x198` |
+| `ContextMenuUseItemModel` | `0x1A0` |
+| `QuickSlots` | `0x1A8` |
+| `Health` | `0x1B0` |
+| `ReloadParamsModel` | `0x1B8` |
+| `InterruptModel` | `0x1C0` |
+| `IndexRollback` | `0x1C8` |
+| `DamageModel` | `0x1D0` |
+| `SprintModel` | `0x1D8` |
+| `ReloadIntention` | `0x1E0` |
+| `TargetAiming` | `0x1E8` |
+| `Aiming` | `0x1F0` |
+| `AimStateModel` | `0x1F8` |
+| `AimModeModel` | `0x200` |
+| `HitsModel` | `0x208` |
+| `NonLethalHitTs` | `0x210` |
+| `Random` | `0x218` |
+| `WeaponSpreadArgsModel` | `0x220` |
+| `WeaponSpread` | `0x228` |
+| `CrouchIntention` | `0x230` |
+| `CheatSprintEnabled` | `0x238` |
+| `CheatReduceIncomeDamageToOneEnabled` | `0x240` |
+| `MovementInertiaDisabledByCheat` | `0x248` |
+| `CheatReduceIncomeDetentionPointsToOneEnabled` | `0x250` |
+| `VehicleLeave` | `0x258` |
+| `InventoryUseItemModel` | `0x260` |
+| `CopInfoModel` | `0x268` |
+| `HideObjectStateModel` | `0x270` |
+| `SurrenderModel` | `0x278` |
+| `TeleportTs` | `0x280` |
+| `InteractModel` | `0x288` |
+| `LastQuickSlotModel` | `0x290` |
+| `FallDamageTrack` | `0x298` |
+| `UsableItemCooldownModel` | `0x2A0` |
+| `ThrowableItemCooldownModel` | `0x2A8` |
+| `TimeEffectsModel` | `0x2B0` |
+| `BlindedState` | `0x2B8` |
+| `MainMenuExitModel` | `0x2C0` |
+| `MoveSpeedModel` | `0x2C8` |
+| `CameraModel` | `0x2D0` |
+| `CharacterController` | `0x2D8` |
+| `PlayerLeaveBattleReasonModel` | `0x2E0` |
+| `Stamina` | `0x2E8` |
+| `StaminaDamage` | `0x2F0` |
+| `VelocityDamage` | `0x2F8` |
+| `DetentionPoints` | `0x300` |
+| `DamageZone` | `0x308` |
+
+## CharacterTransformModel
+
+**Namespace**: `Models.Models.TransformModel`  
+**TypeDefIndex**: 3428  
+
+| Field | Offset |
+|---|---|
+| `X` | `0x10` |
+| `Y` | `0x14` |
+| `Z` | `0x18` |
+| `Pitch` | `0x1C` |
+| `Yaw` | `0x20` |
+| `Roll` | `0x24` |
+
+## TransformModel
+
+**Namespace**: `Models.Models.TransformModel`  
+**TypeDefIndex**: 3430  
+
+| Field | Offset |
+|---|---|
+| `_x` | `0x10` |
+| `_y` | `0x18` |
+| `_z` | `0x20` |
+| `_rx` | `0x28` |
+| `_ry` | `0x30` |
+| `_rz` | `0x38` |
+
+## CharacterReplicatedTransformModel
+
+**Namespace**: `Models.Models.CharacterReplicatedTransform`  
+**TypeDefIndex**: 4099  
+
+| Field | Offset |
+|---|---|
+| `_position` | `0x10` |
+| `_rx` | `0x18` |
+| `_ry` | `0x20` |
+| `_rz` | `0x28` |
+
+## PositionModel
+
+**Namespace**: `Models.Models.PositionModel`  
+**TypeDefIndex**: 3628  
+
+| Field | Offset |
+|---|---|
+| `X` | `0x10` |
+| `Y` | `0x14` |
+| `Z` | `0x18` |
+
+## InteractPositionModel
+
+**Namespace**: `Models.Models.InteractPosition`  
+**TypeDefIndex**: 3873  
+
+| Field | Offset |
+|---|---|
+| `X` | `0x10` |
+| `Y` | `0x14` |
+| `Z` | `0x18` |
+
+## HealthModel
+
+**Namespace**: `Models.Models.Health`  
+**TypeDefIndex**: 3921  
+
+| Field | Offset |
+|---|---|
+| `_health` | `0x10` |
+| `_isDead` | `0x18` |
+| `_maxAmount` | `0x20` |
+| `_criticalHealth` | `0x24` |
+
+## WeaponModel
+
+**Namespace**: `Models.Models.WeaponModel`  
+**TypeDefIndex**: 3348  
+
+| Field | Offset |
+|---|---|
+| `_itemInHands` | `0x10` |
+
+## CrouchModel
+
+**Namespace**: `Models.Models.Crouch`  
+**TypeDefIndex**: 4023  
+
+| Field | Offset |
+|---|---|
+| `_isCrouching` | `0x10` |
+| `_transitionEndTs` | `0x18` |
+| `_transitionTime` | `0x20` |
+
+## BattleStanceModel
+
+**Namespace**: `Models.Models.BattleStance`  
+**TypeDefIndex**: 4271  
+
+| Field | Offset |
+|---|---|
+| `_battleCharacterSkeletonDeformationDescription` | `0x10` |
+| `_battleStance` | `0x18` |
+| `EndTs` | `0x20` |
+
+## BattleCharacterSlotModel
+
+**Namespace**: `Models.Models.BattleCharacterSlots`  
+**TypeDefIndex**: 4298  
+
+| Field | Offset |
+|---|---|
+| `_data` | `0x10` |
+| `Description` | `0x18` |
+
+## BattleCharacterSlotsModel
+
+**Namespace**: `Models.Models.BattleCharacterSlots`  
+**TypeDefIndex**: 4299  
+
+| Field | Offset |
+|---|---|
+| `_slots` | `0x10` |
+| `Slots` | `0x18` |
+
+## BattleCharacterSlotData
+
+**Namespace**: `Models.Data`  
+**TypeDefIndex**: 4895  
+
+| Field | Offset |
+|---|---|
+| `EntityId` | `0x20` |
+| `PublicId` | `0x28` |
+| `Nickname` | `0x30` |
+| `ClanTag` | `0x38` |
+| `EOSProductUserId` | `0x40` |
+| `HasChatAccess` | `0x48` |
+
+## VehicleSeatsModel
+
+**Namespace**: `Models.Models.VehicleSeats`  
+**TypeDefIndex**: 3378  
+
+| Field | Offset |
+|---|---|
+| `_data` | `0x10` |
+| `_description` | `0x18` |
+| `_transform` | `0x20` |
+| `Type` | `0x28` |
+
+## VehicleSeatData
+
+**Namespace**: `Models.Data.Vehicle`  
+**TypeDefIndex**: 5061  
+
+| Field | Offset |
+|---|---|
+| `Occupied` | `0x20` |
+| `EntityId` | `0x28` |
+
+## LookDirectionModel
+
+**Namespace**: `Models.Models.LookDirection`  
+**TypeDefIndex**: 3792  
+
+| Field | Offset |
+|---|---|
+| `_value` | `0x10` |
+| `_yaw` | `0x1C` |
+| `_pitch` | `0x20` |
+
+## InVehicleModel
+
+**Namespace**: `Models.Models.InVehicle`  
+**TypeDefIndex**: 3891  
+
+| Field | Offset |
+|---|---|
+| `_entityId` | `0x10` |
+| `_seatSlot` | `0x18` |
+| `_vehicleType` | `0x20` |
+
+## BattleCharacterStateModel
+
+**Namespace**: `Models.Models.BattleCharacterStateModel`  
+**TypeDefIndex**: 4294  
+
+| Field | Offset |
+|---|---|
+| `_isDeadModel` | `0x10` |
+| `_inVehicleModel` | `0x18` |
+| `_characterHiddenStateModel` | `0x20` |
+| `_arrestTargetModel` | `0x28` |
+| `_knockoutModel` | `0x30` |
+| `_characterControllerState` | `0x38` |
+
+## ContainerModel
+
+**Namespace**: `Models.Models.Container`  
+**TypeDefIndex**: 4048  
+
+| Field | Offset |
+|---|---|
+| `Id` | `0x10` |
+| `Description` | `0x18` |
+| `InteractPositionModel` | `0x20` |
+| `PositionModel` | `0x28` |
+| `UnlockState` | `0x30` |
+| `IsEmpty` | `0x38` |
+| `DrillEndTs` | `0x40` |
+| `CashWithdrawalEventToggle` | `0x48` |
+| `DrillInitiatorEntityId` | `0x50` |
+
+## DoorModel
+
+**Namespace**: `(none)`  
+**TypeDefIndex**: 3983  
+
+*No fields with offsets.*
+
+## DoorModel
+
+**Namespace**: `Models.Models.Door`  
+**TypeDefIndex**: 3984  
+
+| Field | Offset |
+|---|---|
+| `DescriptionModel` | `0x10` |
+| `Initialize` | `0x18` |
+| `Destroy` | `0x20` |
+| `Bodies` | `0x28` |
+| `State` | `0x30` |
+| `Position` | `0x38` |
+| `DoorPhysicsModel` | `0x40` |
+| `OpenCloseRequestModel` | `0x48` |
+| `StateChanged` | `0x50` |
+| `StateChangeCooldown` | `0x58` |
+| `ShotEvents` | `0x60` |
+| `BreakEvents` | `0x68` |
+| `BreakableColliderModels` | `0x70` |
+| `BreakableColliderHits` | `0x78` |
+| `InteractIgnoreRigidBodies` | `0x80` |
+| `BreakableColliderPositionsModel` | `0x88` |
+| `Events` | `0x90` |
+
+## DoorStateModel
+
+**Namespace**: `Models.Models.DoorState`  
+**TypeDefIndex**: 3976  
+
+| Field | Offset |
+|---|---|
+| `_state` | `0x10` |
+
+## LootModel
+
+**Namespace**: `Models.Models.LootModel`  
+**TypeDefIndex**: 3790  
+
+| Field | Offset |
+|---|---|
+| `Id` | `0x10` |
+| `SpawnTickIndex` | `0x18` |
+| `Transform` | `0x20` |
+| `InteractPositionModel` | `0x28` |
+| `BagDescription` | `0x30` |
+| `Role` | `0x38` |
+| `LootChanged` | `0x40` |
+| `PhysicsSource` | `0x48` |
+| `PhysicsState` | `0x50` |
+| `PhysicsAwakeObserver` | `0x58` |
+
+## VehicleLootModel
+
+**Namespace**: `Models.Models.VehicleLootModel`  
+**TypeDefIndex**: 3383  
+
+| Field | Offset |
+|---|---|
+| `Id` | `0x10` |
+| `SpawnTickIndex` | `0x18` |
+| `Transform` | `0x20` |
+| `InteractPositionModel` | `0x28` |
+| `LootChanged` | `0x30` |
+| `HasCargo` | `0x38` |
+| `PhysicsSource` | `0x40` |
+| `PhysicsState` | `0x48` |
+| `PhysicsAwakeObserver` | `0x50` |
+
+## CarModel
+
+**Namespace**: `Models.Models.Car`  
+**TypeDefIndex**: 4180  
+
+| Field | Offset |
+|---|---|
+| `Id` | `0x10` |
+| `BodyId` | `0x14` |
+| `Initialize` | `0x20` |
+| `Destroy` | `0x28` |
+| `CharacterOwner` | `0x30` |
+| `PartyOwner` | `0x38` |
+| `ClanBattleVehicleTeamOwnerModel` | `0x40` |
+| `OwnerRole` | `0x48` |
+| `ControlOwner` | `0x50` |
+| `DriveInput` | `0x58` |
+| `SteeringInput` | `0x60` |
+| `HandBrakeInput` | `0x68` |
+| `BurnoutInput` | `0x70` |
+| `Description` | `0x78` |
+| `SuspensionSettings` | `0x80` |
+| `TireFrictionSettings` | `0x88` |
+| `SteeringSettings` | `0x90` |
+| `TransmissionSettings` | `0x98` |
+| `PhysicsDragSettings` | `0xA0` |
+| `BurnoutSettings` | `0xA8` |
+| `EngineSettings` | `0xB0` |
+| `UpgradesSettings` | `0xB8` |
+| `Transform` | `0xC0` |
+| `LinearVelocity` | `0xC8` |
+| `AngularVelocity` | `0xD0` |
+| `Wheels` | `0xD8` |
+| `Seats` | `0xE0` |
+| `Steering` | `0xE8` |
+| `Transmission` | `0xF0` |
+| `Engine` | `0xF8` |
+| `EngineRules` | `0x100` |
+| `Sleep` | `0x108` |
+| `PhysicsAwakeObserver` | `0x110` |
+| `Parking` | `0x118` |
+| `ParkingEvent` | `0x120` |
+| `HandBrake` | `0x128` |
+| `Burnout` | `0x130` |
+| `HitBoxAccess` | `0x138` |
+| `HitBoxId` | `0x140` |
+| `Events` | `0x148` |
+| `TimelineTickData` | `0x150` |
+| `TickSnapshots` | `0x158` |
+| `TickExtrapolations` | `0x160` |
+| `TimelineSubTickData` | `0x168` |
+| `SubTickSnapshots` | `0x170` |
+| `SubTickExtrapolations` | `0x178` |
+| `SubStepSnapshots` | `0x180` |
+| `WarpedEvent` | `0x188` |
+| `MoveInput` | `0x190` |
+| `TeleportRequest` | `0x198` |
+| `TrunkPosition` | `0x1A0` |
+| `TrunkOpenedModel` | `0x1A8` |
+| `HoodPosition` | `0x1B0` |
+| `UndercarriagePosition` | `0x1B8` |
+| `Exit` | `0x1C0` |
+| `IsWarped` | `0x1C8` |
+| `SirenModel` | `0x1D0` |
+| `IsStuckInSurface` | `0x1D8` |
+| `IsHornEnabled` | `0x1E0` |
+| `IsAvailableToFlip` | `0x1E8` |
+| `Water` | `0x1F0` |
+| `HasFreeCargoSlot` | `0x1F8` |
+| `HasCargo` | `0x200` |
+| `IsUnowned` | `0x208` |
+| `TickData` | `0x210` |
+| `RadioStation` | `0x218` |
+| `DirtLevel` | `0x220` |
+| `TrunkBreachModel` | `0x228` |
+| `IsHoodOpened` | `0x230` |
+| `UpgradesSlots` | `0x238` |
+| `IsRented` | `0x240` |
+
+## PlayerBattleModel
+
+**Namespace**: `Models.Models.PlayerBattle`  
+**TypeDefIndex**: 3697  
+
+| Field | Offset |
+|---|---|
+| `Data` | `0x10` |
+| `ReadyCheckStatusModel` | `0x18` |
+| `Vehicles` | `0x20` |
+| `LastKnockoutTickIndex` | `0x28` |
+| `LastKillTickIndex` | `0x30` |
+| `MapMarkModel` | `0x38` |
+| `VehiclesData` | `0x40` |
+| `LastSpawnVehicleTs` | `0x48` |
+| `PingMarkModel` | `0x50` |
+| `GatherSettlementCollectionsModel` | `0x58` |
+| `IsVehicleTrunkEmpty` | `0x60` |
+| `IsCarUpgradesEmpty` | `0x68` |
+| `SuicideTs` | `0x70` |
+| `SelectedWeaponQuickSlotModel` | `0x78` |
+| `CryptoCoinsModel` | `0x80` |
+| `CoinsModel` | `0x88` |
+| `CoinsAccessModel` | `0x90` |
+| `VipModel` | `0x98` |
+| `DeathModel` | `0xA0` |
+| `ArrestingCopModel` | `0xA8` |
+| `MovePlotCooldownEndTs` | `0xB0` |
+| `VehicleMapTransformModel` | `0xB8` |
+| `IsChangingSpot` | `0xC0` |
+| `GetLocationClanConquestObjectsCooldownEndTs` | `0xC8` |
+| `EmotionSlotsModel` | `0xD0` |
+| `OwnedEmotionsModel` | `0xD8` |
+| `WeaponSkinsModel` | `0xE0` |
+| `OwnedWeaponSkinsModel` | `0xE8` |
+| `OwnedCharacterBodiesSkins` | `0xF0` |
+| `OwnedCharacterFBodiesSkins` | `0xF8` |
+| `OwnedCharacterBagsSkins` | `0x100` |
+| `OwnedCharacterMasksSkins` | `0x108` |
+| `OwnedCharacterKeychainsSkins` | `0x110` |
+| `OwnedShopPacks` | `0x118` |
+| `ShopPackOwnership` | `0x120` |
+| `BattlePassModel` | `0x128` |
+| `BattlePassAwards` | `0x130` |
+| `IsVehicleLootDroppedOnPlayerLeave` | `0x138` |
+| `ChangePlotVehicleExpiringResource` | `0x140` |
+| `PartyVehicleExitModel` | `0x148` |
+| `LocationVehicleModel` | `0x150` |
+| `SendMessageInChatExpiringResource` | `0x158` |
+| `RespawnCooldownEndTs` | `0x160` |
+| `RoleDeathStreaksModel` | `0x168` |
+| `TattoosModel` | `0x170` |
+| `CrimesModel` | `0x178` |
+| `ImprisonmentYears` | `0x180` |
+| `ClaimedImprisonmentYears` | `0x188` |
+| `PrisonEnterType` | `0x190` |
+| `RealmAssetsValues` | `0x198` |
+| `IsRealmSessionConvertedToYears` | `0x1A0` |
+| `BeforePrisonRealmImprisonmentYears` | `0x1A8` |
+| `ImprisonmentYearsDailyLimit` | `0x1B0` |
+| `IsDebtPaid` | `0x1B8` |
+| `IsDebtImprisonmentYearsBonusUsed` | `0x1C0` |
+| `BattlePassPoints` | `0x1C8` |
+| `TutorialStep` | `0x1D0` |
+| `TutorialLastStepTs` | `0x1D8` |
+| `PoliceCarBreachState` | `0x1E0` |
+| `UpgradesHolderCarEntityId` | `0x1E8` |
+| `CarUpgradesHolderType` | `0x1F0` |
+| `IsPlayerKickedFromClanBattle` | `0x1F8` |
+| `PersonalDisconnectTs` | `0x200` |
+| `SelfSector` | `0x208` |
+| `FirstAidCabinets` | `0x210` |
+| `CopSalary` | `0x218` |
+| `HoldingCell` | `0x220` |
+| `RobberAuthorityModel` | `0x228` |
+| `SpawnedVehicleModel` | `0x230` |
+| `TargetBattleModel` | `0x238` |
+| `IsCopRewardBoxEmpty` | `0x240` |
+| `CopRewardBoxEntityId` | `0x248` |
+| `CopPreset` | `0x250` |
+| `CopPresetIsFree` | `0x258` |
+| `InventoryBackupModel` | `0x260` |
+| `BackupInventoryPoliceBadgesModel` | `0x268` |
+| `WantedPoints` | `0x270` |
+| `CopCryBuffEndTs` | `0x278` |
+| `CopSirenBuffEndTs` | `0x280` |
+| `CopSirenBuffTargetCarId` | `0x288` |
+| `CopReinforcementBuffEndTs` | `0x290` |
+| `EOSModel` | `0x298` |
+| `UnlockedVendorTreeNodes` | `0x2A0` |
+| `GetLockedVendorTreeNodesPriceItemsCountExpiringResource` | `0x2A8` |
+| `GetCashItemsCountExpiringResource` | `0x2B0` |
+| `CharacterLaundering` | `0x2B8` |
+| `CharacterRouletteReward` | `0x2C0` |
+| `PersonalRepositoryEntityId` | `0x2C8` |
+| `PoliceBadgeRepositoryEntityId` | `0x2D0` |
+| `PoliceBadgeRepositoryAmountsModel` | `0x2D8` |
+| `TakenCashModel` | `0x2E0` |
+| `AssistingCops` | `0x2E8` |
+| `SellCryptoExpiringResource` | `0x2F0` |
+| `BuyCryptoExpiringResource` | `0x2F8` |
+| `MailboxModel` | `0x300` |
+| `CopRecruitingReadyCheckModel` | `0x308` |
+| `AchievementsModel` | `0x310` |
+| `AchievementAwardsModel` | `0x318` |
+| `UsedTransactionsModel` | `0x320` |
+| `LastRoleChangeDataModel` | `0x328` |
+
+## BattleCameraModel
+
+**Namespace**: `Game.Battle.Entities.Player.Camera`  
+**TypeDefIndex**: 7877  
+
+| Field | Offset |
+|---|---|
+| `_flip` | `0x0` |
+| `Position` | `0x10` |
+| `Orientation` | `0x1C` |
+| `LookAtCameraOrientation` | `0x2C` |
+| `Forward` | `0x3C` |
+| `Right` | `0x48` |
+| `Up` | `0x54` |
+| `DistanceToFollowTarget` | `0x60` |
+
+## SensitivityModel
+
+**Namespace**: `Game.Shared.Models`  
+**TypeDefIndex**: 9810  
+
+| Field | Offset |
+|---|---|
+| `PlayerPreferenceValue` | `0x10` |
+| `PlayerPreferenceAimValue` | `0x14` |
+| `WeaponValue` | `0x18` |
+| `InvertMouseY` | `0x1C` |
+
+## GlobalModel
+
+**Namespace**: `Game.Global`  
+**TypeDefIndex**: 9846  
+
+| Field | Offset |
+|---|---|
+| `UserTimeModel` | `0x10` |
+| `RegionUserTimeModel` | `0x18` |
+| `UserIsRequesting` | `0x20` |
+| `EndGameModel` | `0x28` |
+| `DeviceModel` | `0x30` |
+| `CursorLockModel` | `0x38` |
+| `GlobalNotificationModel` | `0x40` |
+| `PersonalNotificationModel` | `0x48` |
+| `PlotAlarmNotificationModel` | `0x50` |
+| `SensitivityModel` | `0x58` |
+| `InBattleSettingsModel` | `0x60` |
+| `KeyboardMouseControlsSettingsModel` | `0x68` |
+| `UISoundModel` | `0x70` |
+| `ModalDialogModel` | `0x78` |
+| `PublicIdModel` | `0x80` |
+| `RenameModel` | `0x88` |
+| `RenameCooldownEndTs` | `0x90` |
+| `FactoriesModel` | `0x98` |
+| `ScreensModel` | `0xA0` |
+| `SpaceSoundModel` | `0xA8` |
+| `UserRegionModel` | `0xB0` |
+| `RealmModel` | `0xB8` |
+| `SettlementModel` | `0xC0` |
+| `PartyModel` | `0xC8` |
+| `ClanModel` | `0xD0` |
+| `RealmBattleStateModel` | `0xD8` |
+| `CoinsModel` | `0xE0` |
+| `CoinsAccessModel` | `0xE8` |
+| `CryptoCoinsModel` | `0xF0` |
+| `RegionUserCustomizationVersionModel` | `0xF8` |
+| `BattleRoomModel` | `0x100` |
+| `ImprisonmentYearsModel` | `0x108` |
+| `UserDebtPaidModel` | `0x110` |
+| `RegionUserDebtPaidModel` | `0x118` |
+| `AchievementsModel` | `0x120` |
+| `GameSetting` | `0x128` |
+| `AdvancedGameSettings` | `0x130` |
+| `SoundLanguage` | `0x138` |
+| `ServerShutdownTimeScreenModel` | `0x140` |
+| `ProcessingScreenModel` | `0x148` |
+| `RegionUserDelayedResponsesModel` | `0x150` |
+| `SideMenuDialogScreenModel` | `0x158` |
+| `PopupNotificationDialogModel` | `0x160` |
+| `PopupNotificationsModel` | `0x168` |
+| `SettingsDialogModel` | `0x170` |
+| `CharacterCustomizationDialogModel` | `0x178` |
+| `CodexDialogModel` | `0x180` |
+| `MailDialogModel` | `0x188` |
+| `PartyManagerDialogModel` | `0x190` |
+| `InviteToPartyIntentionModel` | `0x198` |
+| `PopupClanDialogModel` | `0x1A0` |
+| `ClanDialogModel` | `0x1A8` |
+| `ClanSettingsDialogModel` | `0x1B0` |
+| `ClanSearchDialogModel` | `0x1B8` |
+| `ClanRankDialogModel` | `0x1C0` |
+| `ClanInvitePopupModel` | `0x1C8` |
+| `PoliceReinforcementInvitePopupModel` | `0x1D0` |
+| `ClanBattleEnterDialogModel` | `0x1D8` |
+| `SkinCenterDialogModel` | `0x1E0` |
+| `RegionUserSkinCenterModel` | `0x1E8` |
+| `ReputationDialogModel` | `0x1F0` |
+| `LandOwnershipDialogModel` | `0x1F8` |
+| `TattooUnlockDialogModel` | `0x200` |
+| `ImprisonmentAwardClaimStateModel` | `0x208` |
+| `InputHoldModel` | `0x210` |
+| `UserCreationTs` | `0x218` |
+| `BattlePassPoints` | `0x220` |
+| `BattlePass` | `0x228` |
+| `BattlePassPremiumDialogModel` | `0x230` |
+| `LoadingModel` | `0x238` |
+| `RegionUserNotificationModel` | `0x240` |
+| `RegionUserModel` | `0x248` |
+| `ClanBattleAppointmentNotificationsModel` | `0x250` |
+| `SettlementOwnersModel` | `0x258` |
+| `RealmInfoModel` | `0x260` |
+| `RealmInfoSourceModel` | `0x268` |
+| `ReceivedRequestsModel` | `0x270` |
+| `IntroCinematicModel` | `0x278` |
+| `DisconnectInfoModel` | `0x280` |
+| `SkinsCheatStateModel` | `0x288` |
+| `PlayerPrefsModel` | `0x290` |
+| `GlobalPlayerRoleModel` | `0x298` |
+| `ConfiscationModel` | `0x2A0` |
+| `ChatsModel` | `0x2A8` |
+| `ChatRestrictionModel` | `0x2B0` |
+| `ChatDialogModel` | `0x2B8` |
+| `SocialModel` | `0x2C0` |
+| `BlackListModel` | `0x2C8` |
+| `BadWordsFilterModel` | `0x2D0` |
+| `ChatSpamRules` | `0x2D8` |
+| `BlackListDialog` | `0x2E0` |
+| `SystemChat` | `0x2E8` |
+| `SystemRulesChat` | `0x2F0` |
+| `ClanBattleChat` | `0x2F8` |
+| `PrivateReceivedChat` | `0x300` |
+| `UserChatCooldown` | `0x308` |
+| `RegionUserChatCooldown` | `0x310` |
+| `RealmChatCooldown` | `0x318` |
+| `RegionUserExpiringResourcesModel` | `0x320` |
+| `RegionsInfo` | `0x328` |
+| `RegionClusterViewDescriptions` | `0x330` |
+| `RealmsInfo` | `0x338` |
+| `TutorialModel` | `0x340` |
+| `TutorialFinishDialogModel` | `0x348` |
+| `ClientCodexModel` | `0x350` |
+| `IsClanBattleFound` | `0x358` |
+| `TooltipMiniModel` | `0x360` |
+| `ScopesLoadingModel` | `0x368` |
+| `DeviceScreenModel` | `0x370` |
+| `RegionUserBuySettlementModel` | `0x378` |
+| `InputsEnabledModel` | `0x380` |
+| `SteamAdapter` | `0x388` |
+| `PaymentsModel` | `0x390` |
+| `PaymentsProcessor` | `0x398` |
+| `EosGlobalModel` | `0x3A0` |
+| `AnalyticsGlobalModel` | `0x3A8` |
+| `VoiceChatGlobalModel` | `0x3B0` |
+| `UsedTransactionsModel` | `0x3C0` |
+| `InventoryRevealModels` | `0x3C8` |
+| `PresentationModel` | `0x3D0` |
+| `StreamerModeModel` | `0x3D8` |
+| `SuicideInputModel` | `0x3E0` |
+| `InstantSurrenderToFedsInputModel` | `0x3E8` |
+| `HoldingSurrenderToFedsInputModel` | `0x3F0` |
+| `LeaveGameInputModel` | `0x3F8` |
+| `OpenSettingsInputModel` | `0x400` |
+| `OpenPartyInputModel` | `0x408` |
+| `OpenClanInputModel` | `0x410` |
+| `OpenHintsInputModel` | `0x418` |
+| `OpenBuffInputModel` | `0x420` |
+| `OpenCodexInputModel` | `0x428` |
+| `OpenMailInputModel` | `0x430` |
+| `OpenSideMenuInputModel` | `0x438` |
+| `OpenSkinCenterInputModel` | `0x440` |
+| `OpenReputationInputModel` | `0x448` |
+| `OpenVendorDialogInputModel` | `0x450` |
+| `OpenLandOwnershipInputModel` | `0x458` |
+
+## BattleModel
+
+**Namespace**: `Game.Battle`  
+**TypeDefIndex**: 5523  
+
+| Field | Offset |
+|---|---|
+| `_battleRoomModel` | `0x10` |
+| `_battleConnectionModel` | `0x18` |
+| `RobberLocationEventModels` | `0x20` |
+| `LocationSafeDoorModel` | `0x28` |
+| `RealmVersion` | `0x30` |
+| `Time` | `0x38` |
+| `PlayerRotationInput` | `0x40` |
+| `PlayerMovementInput` | `0x48` |
+| `BattleInputModel` | `0x50` |
+| `UISoundModel` | `0x58` |
+| `DebugNetModel` | `0x60` |
+| `CarStatsModel` | `0x68` |
+| `HelicopterStatsModel` | `0x70` |
+| `VehicleStatsModel` | `0x78` |
+| `CheatSpawnCarModel` | `0x80` |
+| `CheatSpawnHelicopterModel` | `0x88` |
+| `BattleEntitiesModel` | `0x90` |
+| `BattleSettings` | `0x98` |
+| `DataModels` | `0xA0` |
+| `ClanBattleCharacterTeamModel` | `0xA8` |
+| `InterpolationStatsModel` | `0xB0` |
+| `InputsStatsModel` | `0xB8` |
+| `PacketStatsModel` | `0xC0` |
+| `ConnectionStatsModel` | `0xC8` |
+| `LocationHits` | `0xD0` |
+| `CharactersShotsModel` | `0xD8` |
+| `CharactersMeleeAttackModel` | `0xE0` |
+| `SprintInputModel` | `0xE8` |
+| `AimInputModel` | `0xF0` |
+| `AutoAimIntentionModel` | `0xF8` |
+| `CrouchInputModel` | `0x100` |
+| `JumpInputModel` | `0x108` |
+| `ShotInputModel` | `0x110` |
+| `AimModeInputModel` | `0x118` |
+| `MeleeAttackInputModel` | `0x120` |
+| `UseInputModel` | `0x128` |
+| `UseHoldingInputModel` | `0x130` |
+| `InVehicleUseInputModel` | `0x138` |
+| `BackInputModel` | `0x140` |
+| `LeaveVehicle` | `0x148` |
+| `GetOutHideObject` | `0x150` |
+| `CarSirenInputModel` | `0x158` |
+| `ChatInputModel` | `0x160` |
+| `LeftShoulderViewInputModel` | `0x168` |
+| `QuickSlotsInputModel` | `0x170` |
+| `InventoryDialogModel` | `0x178` |
+| `InventoryModels` | `0x180` |
+| `ProlongedInteractionDialogModel` | `0x188` |
+| `MarkersModel` | `0x190` |
+| `AimTargetModel` | `0x198` |
+| `TargetModel` | `0x1A0` |
+| `InVehicleTargetModel` | `0x1A8` |
+| `InteractAreasNearPlayerModel` | `0x1B0` |
+| `PreferredTargetModel` | `0x1B8` |
+| `ShotBlockedModel` | `0x1C0` |
+| `PlayerContextMenu` | `0x1C8` |
+| `CarHandBrakeInputModel` | `0x1D0` |
+| `MapDialogModel` | `0x1D8` |
+| `MapMarkersModel` | `0x1E0` |
+| `MapConfigModel` | `0x1E8` |
+| `ShotIntentionModel` | `0x1F0` |
+| `AutomaticShotParamsModel` | `0x1F8` |
+| `SingleShotParamsModel` | `0x200` |
+| `ShotInputLockModel` | `0x208` |
+| `SprintIntentionModel` | `0x210` |
+| `NetworkConnectionStatusModel` | `0x218` |
+| `DeathScreenModel` | `0x220` |
+| `OpenInventoryInputModel` | `0x228` |
+| `OpenMapInputModel` | `0x230` |
+| `OpenEmotionDialogInputModel` | `0x238` |
+| `UnlockRequirementItemPositionModel` | `0x240` |
+| `CharacterSlotsModel` | `0x248` |
+| `PredictionExtraTimeModel` | `0x250` |
+| `TargetHintObjectsModel` | `0x258` |
+| `SurrenderInputModel` | `0x260` |
+| `OfferBribeInputModel` | `0x268` |
+| `SurrenderOrderInputModel` | `0x270` |
+| `HideAndSeekNotificationModel` | `0x278` |
+| `SurrenderArrestingInputModel` | `0x280` |
+| `BecomeRobberNotificationModel` | `0x288` |
+| `BecomeRobberInputModel` | `0x290` |
+| `PartyBuffModel` | `0x298` |
+| `ResourceNotificationModel` | `0x2A0` |
+| `IncomingDebugShots` | `0x2A8` |
+| `IncomingPhysicsDebugData` | `0x2B0` |
+| `ForceKnockoutEndInputModel` | `0x2B8` |
+| `ObserverRequestModel` | `0x2C0` |
+| `DeferredOpenModel` | `0x2C8` |
+| `CarTrunkDistanceOpenModel` | `0x2D0` |
+| `CarUpgradesHolderOpenModel` | `0x2D8` |
+| `ShelvingsOpenModel` | `0x2E0` |
+| `Markers3DModel` | `0x2E8` |
+| `MailIndicationModel` | `0x2F0` |
+| `DropCargoInputModel` | `0x2F8` |
+| `EmotionDialogModel` | `0x300` |
+| `PingMarkerCollidersModel` | `0x308` |
+| `PingInputModel` | `0x310` |
+| `ProlongedActionProcessModel` | `0x318` |
+| `BollardInputModel` | `0x320` |
+| `BollardActiveModel` | `0x328` |
+| `SelectedCargoModel` | `0x330` |
+| `VehiclesModel` | `0x338` |
+| `DelayedResponsesModel` | `0x340` |
+| `LaptopDialogModel` | `0x348` |
+| `AchievementsDialogModel` | `0x350` |
+| `BattleCameraModel` | `0x358` |
+| `CheatModel` | `0x360` |
+| `MapBuildingsModel` | `0x368` |
+| `SettlementHelperModel` | `0x370` |
+| `SettlementModel` | `0x378` |
+| `SettlementBonusModel` | `0x380` |
+| `WorldWaterZonesModel` | `0x388` |
+| `MixingCameraBlendModel` | `0x390` |
+| `CharactersInVehiclesModel` | `0x398` |
+| `PlotsViewModel` | `0x3A0` |
+| `RenderersCullingRoomsViewModel` | `0x3A8` |
+| `LocationPlotSpotsModel` | `0x3B0` |
+| `CarLandingCameraShakeModel` | `0x3B8` |
+| `CompassMarkersModel` | `0x3C0` |
+| `MapDistrictNamesModel` | `0x3C8` |
+| `ClanBattleModel` | `0x3D0` |
+| `GrenadesExplosionsModel` | `0x3D8` |
+| `GrenadeCameraShakingModel` | `0x3E0` |
+| `ClanBattleDialogModel` | `0x3E8` |
+| `OpenClanBattleDialogInputModel` | `0x3F0` |
+| `OpenClanShowdownInputModel` | `0x3F8` |
+| `ClanBattleTeamsCacheModel` | `0x400` |
+| `CargoExchangerDialogModel` | `0x408` |
+| `CurrencyExchangeDialogModel` | `0x410` |
+| `TaxCollectionDialogModel` | `0x418` |
+| `RenameInputModel` | `0x420` |
+| `TaxPointMarkerModel` | `0x428` |
+| `GrenadePathModel` | `0x430` |
+| `OverlayModel` | `0x438` |
+| `RegularGridModel` | `0x440` |
+| `PartyMemberAccessModel` | `0x448` |
+| `ObserverModel` | `0x450` |
+| `MinimapRenderersModel` | `0x458` |
+| `ModelLODControllerModel` | `0x460` |
+| `ViewLODControllerModel` | `0x468` |
+| `VehiclesCollisionsModel` | `0x470` |
+| `VehicleCollisionsWithBreakableCollidersModel` | `0x478` |
+| `TooltipModel` | `0x480` |
+| `MeshTransformationTool` | `0x488` |
+| `BurnoutSmokeVfxModel` | `0x490` |
+| `VehicleOwnersModel` | `0x498` |
+| `PlayerBattleModel` | `0x4A0` |
+| `CoinsModel` | `0x4A8` |
+| `CryptoCoinsModel` | `0x4B0` |
+| `ImprisonmentYearsModel` | `0x4B8` |
+| `ClaimedImprisonmentYearsModel` | `0x4C0` |
+| `DebtPaidModel` | `0x4C8` |
+| `BattleCharacterSlotsModel` | `0x4D0` |
+| `ReadFromSerializer` | `0x4D8` |
+| `ReadUpdateSerializer` | `0x4E0` |
+| `WriteSerializer` | `0x4E8` |
+| `WriteStream` | `0x4F0` |
+| `EntitiesParamsModel` | `0x4F8` |
+| `LocationDescriptionEntitiesDataModel` | `0x500` |
+| `LocationDescriptionEntitiesModel` | `0x508` |
+| `PhysicsBodiesModel` | `0x510` |
+| `WorldEntitiesModel` | `0x518` |
+| `WorldSettingsOverrideModel` | `0x520` |
+| `CharactersLoadedContents` | `0x528` |
+| `TaxesIconNotificationModel` | `0x530` |
+| `PopUpPresentationDialogModel` | `0x538` |
+| `ConstraintSolverData` | `0x540` |
+| `BattleNotificationsChat` | `0x548` |
+| `BattleRulesChat` | `0x550` |
+| `PrisonAccusationDialogModel` | `0x558` |
+| `DebugBattleReplicationModel` | `0x560` |
+| `CarHornInputModel` | `0x568` |
+| `CarBurnoutInputModel` | `0x570` |
+| `LocationEventModel` | `0x578` |
+| `ResetBuildingsListModel` | `0x580` |
+| `ParticleEffectsModel` | `0x588` |
+| `ClanProtectingInfoDialogModel` | `0x590` |
+| `RentPlotDialogModel` | `0x598` |
+| `OpenBankAccountDialogModel` | `0x5A0` |
+| `KillLogsModel` | `0x5A8` |
+| `VisibleRobbersModel` | `0x5B0` |
+| `HighlightedBuildingsModel` | `0x5B8` |
+| `SwitchRealmDialogModel` | `0x5C0` |
+| `SoundMarkersModel` | `0x5C8` |
+| `ContentCache` | `0x5D0` |
+| `BattleAssistanceModel` | `0x5D8` |
+| `BarterDialogModel` | `0x5E0` |
+| `CopEquipDialogModel` | `0x5E8` |
+| `LocationSoundsModel` | `0x5F0` |
+| `PlotsCollidersModel` | `0x5F8` |
+| `PlotsDamageZonesModel` | `0x600` |
+| `BattleAlarmMarkersModel` | `0x608` |
+| `DelayedUseActionModel` | `0x610` |
+| `VendorTreeDialogModel` | `0x618` |
+| `TalkDialogModel` | `0x620` |
+| `RouletteDialogModel` | `0x628` |
+| `VoiceChatBattleRoomModel` | `0x630` |
+| `VoiceChatInputModel` | `0x638` |
+| `TargetSubsystemsResultModel` | `0x640` |
+| `ZoomLevelActions` | `0x648` |
+| `CommonProlongedInteractionHandlers` | `0x650` |
+
+## VoiceChatRoomModel
+
+**Namespace**: `Game.Global.VoiceChat`  
+**TypeDefIndex**: 9937  
+
+| Field | Offset |
+|---|---|
+| `RoomName` | `0x10` |
+| `HasSpeakingInput` | `0x18` |
+| `NotificationsModel` | `0x20` |
+| `Credentials` | `0x28` |
+| `ConnectionModel` | `0x30` |
+| `ParticipantsModel` | `0x38` |
+
+## VoiceChatParticipantsModel
+
+**Namespace**: `(none)`  
+**TypeDefIndex**: 9933  
+
+*No fields with offsets.*
+
+## VoiceChatParticipantsModel
+
+**Namespace**: `Game.Global.VoiceChat`  
+**TypeDefIndex**: 9934  
+
+| Field | Offset |
+|---|---|
+| `_participantIdToModels` | `0x10` |
+| `_participantStringIdToModels` | `0x18` |
+
+## VoiceChatBattleParticipantModel
+
+**Namespace**: `Game.Battle.VoiceChat`  
+**TypeDefIndex**: 5812  
+
+| Field | Offset |
+|---|---|
+| `SlotDescription` | `0x38` |
+| `Position` | `0x40` |
+| `SoundEmitterPosition` | `0x50` |
+| `PositionCacheEndTime` | `0x60` |
+| `HideObjectEntityId` | `0x64` |
+| `IsPostingAudio` | `0x68` |
+
+## VoiceChatRoomParticipantModel
+
+**Namespace**: `Game.Global.VoiceChat`  
+**TypeDefIndex**: 9939  
+
+| Field | Offset |
+|---|---|
+| `ProductUserId` | `0x10` |
+| `ProductUserIdString` | `0x18` |
+| `IsMuted` | `0x20` |
+| `IsSpeaking` | `0x21` |
+| `AudioBuffer` | `0x28` |
+| `LastActiveSpeakingTs` | `0x30` |
+

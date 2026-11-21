@@ -1,0 +1,6 @@
+#include "brand_resources.h"
+1 ICON "brand\\brand.ico"
+IDR_BRAND_PNG  RCDATA "brand\\brand.png"
+IDR_FONT_SPACE RCDATA "brand\\SpaceGrotesk.ttf"
+IDR_FONT_INTER RCDATA "brand\\Inter.ttf"
+1 24 "loader.manifest"
