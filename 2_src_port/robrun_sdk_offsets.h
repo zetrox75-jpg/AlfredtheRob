@@ -72,7 +72,7 @@
 #define RR_OFF_HELI_TRANSFORM            0x70u  /* Models.Models.Helicopter.HelicopterModel.Transform */
 #define RR_OFF_HELI_SEATS                0x90u  /* Models.Models.Helicopter.HelicopterModel.Seats */
 #define RR_OFF_ENTRY_GAME                0x28u  /* Start.UnityEntry._game */
-#define RR_OFF_GAME_MODEL                0xD0u  /* Game.Game.GameModel */
+#define RR_OFF_GAME_MODEL                0xD8u  /* Game.Game.GameModel */
 #define RR_OFF_GAME_BATTLE               0x10u  /* Game.GameModel._battleModel */
 #define RR_OFF_BATTLE_ENTITIES           0x90u  /* Game.Battle.BattleModel.BattleEntitiesModel */
 #define RR_OFF_BATTLE_CAMERA             0x358u  /* Game.Battle.BattleModel.BattleCameraModel */

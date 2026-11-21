@@ -578,7 +578,7 @@
       "assembly": "Game",
       "type": "Game.Game",
       "field": "GameModel",
-      "offset": 208,
+      "offset": 216,
       "instance_size": 224,
       "declaration": "private GameModel <GameModel>k__BackingField",
       "dump_line": 1700248
