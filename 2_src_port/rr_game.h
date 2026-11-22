@@ -219,6 +219,13 @@ typedef struct RR_LOOT_DEBUG {
  * drives it directly. Returns the number of published entries. */
 int rr_loot_refresh(RR_LOOT_DEBUG* dbg);
 
+/* Instant loot: override the reveal animation timing values on an active
+ * InventoryRevealViewDescriptions instance so items appear instantly. Call this
+ * periodically while a container is being opened (e.g., from the ESP loop when
+ * instant_loot is enabled). No-op if no inventory reveal view is currently
+ * active or addresses are invalid. */
+void rr_instant_loot(void);
+
 /* Address of the local player's BattleCharacterModel, 0 until the roster is
  * published. */
 uint64_t rr_local_player(void);

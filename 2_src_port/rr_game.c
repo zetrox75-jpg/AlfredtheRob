@@ -3443,6 +3443,62 @@ int rr_loot_refresh(RR_LOOT_DEBUG* dbg) {
     return g_nloot[0] + g_nloot[1];
 }
 
+/* Instant loot: override the reveal animation timing values on an active
+ * InventoryRevealViewDescriptions instance. When enabled, this should be called
+ * periodically while a container is being opened so the items appear instantly
+ * rather than animating one-by-one.
+ *
+ * Based on reversal from:
+ * https://www.unknowncheats.me/forum/rob-run/782774-instant-loot-insta-view-loot.html
+ */
+void rr_instant_loot(void) {
+    uint64_t updater = g_views_updater;
+    if (!views_updater_valid(updater, g_battle)) return;
+
+    /* BattleEntitiesUpdater -> BattleScreenContent (offset 0x68)
+     * The exact field name/offset for the screen content pointer is not yet
+     * in robrun_sdk_offsets.h; this uses a raw offset discovered through
+     * manual inspection. */
+    uint64_t content = rr_u64(updater + 0x68);
+    if (!content) return;
+
+    /* BattleScreenContent -> InventoryRevealViewDescriptions instance (offset 0x540)
+     * This is null when no container reveal is active. */
+    uint64_t inst = rr_u64(content + 0x540);
+    if (!inst) return;
+
+    /* TimeToOneCellBorder - delay between revealing each cell (offset 0x58)
+     * Setting this to a tiny value makes items appear nearly simultaneously. */
+    float border_delay = 0.0001f;
+    rr_write(inst + 0x58, &border_delay, sizeof(border_delay));
+
+    /* Iterate the list of item descriptions and set their individual
+     * animation durations to zero (offsets 0x40 and 0x68 per description).
+     * List is at inst + 0x18, items are stride 0x20 with Description* at +0x10. */
+    uint64_t list = rr_u64(inst + 0x18);
+    if (!list) return;
+
+    int size = rr_i32(list + 0x18);
+    uint64_t items = rr_u64(list + 0x10);
+    if (size <= 0 || size > 500 || !items) return;
+
+    for (int i = 0; i < size; ++i) {
+        uintptr_t pair_addr = items + 0x20 + (uintptr_t)i * 0x18;
+        uint64_t desc = rr_u64(pair_addr + 0x10);
+        if (!desc) continue;
+
+        /* Shine animation duration (inline struct at 0x18, float field at 0x28)
+         * Total offset from description: 0x18 + 0x28 = 0x40 */
+        float shine_dur = 0.0f;
+        rr_write(desc + 0x40, &shine_dur, sizeof(shine_dur));
+
+        /* Icon reveal animation duration (inline struct at 0x50, float field at 0x18)
+         * Total offset from description: 0x50 + 0x18 = 0x68 */
+        float icon_dur = 0.0f;
+        rr_write(desc + 0x68, &icon_dur, sizeof(icon_dur));
+    }
+}
+
 /* Count a vehicle's seat flags only if every entry can be read and validated.
  * A failed read is unknown, not evidence that the vehicle is empty. */
 static int vehicle_seat_count(uint64_t seats, int* occupied) {

@@ -597,6 +597,9 @@ static DWORD WINAPI ReadThread(LPVOID p) {
         snap_started = timeGetTime();
         __try {
             n = game_snapshot(tmp, RR_MAX_PLAYERS, &cam);
+            /* Instant loot: override reveal animation timing while active.
+             * No-op if no container reveal is currently in progress. */
+            if (b->instant_loot) rr_instant_loot();
         } __except (EXCEPTION_EXECUTE_HANDLER) {
             hklogf("exception in game_snapshot");
             n = 0;
@@ -623,6 +626,7 @@ static DWORD WINAPI ReadThread(LPVOID p) {
         if (InterlockedExchange(&g_rescan_now, 0) && !game_discovery_active()) {
             game_init();
             n = game_snapshot(tmp, RR_MAX_PLAYERS, &cam);
+            if (b->instant_loot) rr_instant_loot();
         }
         /* Check the image signature for attachment liveness. Three failed checks
          * trigger reattachment while tolerating a brief read failure.
@@ -643,6 +647,7 @@ static DWORD WINAPI ReadThread(LPVOID p) {
                     hklogf("re-attached to pid %u", g_rr_pid);
                     game_init();
                     n = game_snapshot(tmp, RR_MAX_PLAYERS, &cam);
+                    if (b->instant_loot) rr_instant_loot();
                 } else {
                     g_rr_pid = 0;   /* the attach loop at the loop head retries */
                 }
@@ -665,6 +670,7 @@ static DWORD WINAPI ReadThread(LPVOID p) {
             (n == 0 || game_world_addr() == 0)) {
             game_init();
             n = game_snapshot(tmp, RR_MAX_PLAYERS, &cam);
+            if (b->instant_loot) rr_instant_loot();
         }
 
         EnterCriticalSection(&g_cs);

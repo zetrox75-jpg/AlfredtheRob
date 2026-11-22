@@ -60,6 +60,7 @@ extern "C" {
     X(show_doors, 0, 0, 1) \
     X(show_dropped_loot, 0, 0, 1) \
     X(show_vehicle_loot, 0, 0, 1) \
+    X(instant_loot, 0, 0, 1) \
     X(radar_world, 0, 0, 1) \
     X(show_crouch, 0, 0, 1) \
     X(show_health, 0, 0, 1) \
