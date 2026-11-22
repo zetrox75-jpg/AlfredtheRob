@@ -551,6 +551,7 @@ static void overlay_exit(int code) {
 
 static DWORD WINAPI ReadThread(LPVOID p) {
     (void)p;
+    BR_Config* b = br_get();
     timeBeginPeriod(1);
     int tick = 0;
     int dead_ticks = 0;

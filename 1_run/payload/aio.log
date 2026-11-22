@@ -1,4 +1,4 @@
-﻿payload folder: C:\Users\73\Downloads\RRTool_Public_NoKey\1_run\payload
+﻿payload folder: C:\Users\73\Desktop\RRToolnotmain\1_run\payload
 Vinny TuSuce Bien  —  Rob Run
 hypervisor present : no
 VBS registry       : disabled
@@ -8,16 +8,16 @@ virtualization check passed
 settings: menu_delay=5 menu_wait_window=1 attach_timeout=120 reattach_attempts=3 hide_launcher=0 masquerade=1
 extracted kd2.exe (222720 bytes)
 extracted kernel-mode.sys (18944 bytes)
-extracted RobRunPort.exe (2387456 bytes)
+extracted RobRunPort.exe (2232832 bytes)
 extracted WebView2Loader.dll (165440 bytes)
 kernel-mode.sys SHA256 5bbe7abb3e60e176195db2989704d863791df300219c3f13938117335319b2d1
 driver is already mapped in this session; skipping kd2.exe
-driver ready (Key 0x321DFFE8)
-ROB RUN.exe is running (pid 24256)
-game window "ROB RUN" 1920x1080 (pid 24256) after 7 s
+driver ready (Key 0x70E314E9)
+ROB RUN.exe is running (pid 8908)
+game window "ROB RUN" 1920x1080 (pid 8908) after 4 s
 waiting 5 s for the main menu
 menu wait finished
-overlay runs as dllhost.exe in C:\Users\73\AppData\Local\Temp
-overlay started (pid 27368)
-overlay attached (game pid 24256)
+overlay runs as backgroundTaskHost.exe in C:\Users\73\AppData\Local\Temp
+overlay started (pid 27004)
+overlay attached (game pid 8908)
 done
