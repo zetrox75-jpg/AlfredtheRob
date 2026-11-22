@@ -1694,31 +1694,53 @@ static void fill_entry(ENT_CACHE* c, uint64_t p) {
             if (PL(bd)) { uint8_t b = 0; if (rr_read(bd + RR_OFF_PRIM_VALUE, &b, 1)) c->armor = b; }
         }
     }
-    /* Knockout (downed) state: require both a non-null KnockoutModel AND
-     * the phase name being exactly "KnockedOut". This prevents false positives
-     * where stale/default phase values exist on standing players.
+    /* Knockout (downed) state: read the raw enum value directly. Per
+     * UnknownCheats reversal data:
+     *   enum class KnockoutPhaseDescription : int8_t {
+     *       None = 0, KnockingDown = 1, KnockedOut = 2, Reviving = 3
+     *   }
+     * We check if phase >= 1 (anything other than None) to detect downed players.
+     * This is more reliable than string comparison because it avoids pointer chain issues.
      * Chain: character+0x298 -> KnockoutModel -> +0x18 _knockoutPhase (IPrimitiveData)
-     *        -> +0x18 value (KnockoutPhaseDescription) -> +0x10 Name string */
+     *        -> +0x18 value (int8_t enum) */
     {
+        int isdead = 0;
+        uint64_t isd = rr_u64(p + RR_OFF_CHAR_ISDEAD);
+        if (PL(isd)) {
+            uint64_t isdm = PL(rr_u64(isd + 0x10)) ? rr_u64(isd + 0x10) : 0;
+            if (PL(isdm)) { uint8_t b = 0; if (rr_read(isdm + 0x18, &b, 1)) isdead = b; }
+        }
+
+        int knocked_out = 0;
+        char phasename[32] = {"None"};
         uint64_t ko = rr_u64(p + RR_OFF_CHAR_KNOCKOUT);
-        int has_ko_model = PL(ko) ? 1 : 0;
-        char phasename[32] = {0};
-        if (has_ko_model) {
+        if (PL(ko)) {
+            /* Read raw enum value at KnockoutPhase */
             uint64_t phd = rr_u64(ko + RR_OFF_KO_PHASE);
-            uint64_t phase = PL(phd) ? rr_u64(phd + RR_OFF_PRIM_VALUE) : 0;
-            if (PL(phase)) {
-                uint64_t namestr = rr_u64(phase + RR_OFF_DESC_NAME);
-                if (PL(namestr)) u_string(namestr, phasename, sizeof(phasename));
+            int phase_val = 0;
+            if (PL(phd) && rr_read(phd + RR_OFF_PRIM_VALUE, &phase_val, 1)) {
+                /* Map enum to name for debugging */
+                switch(phase_val) {
+                    case 0: snprintf(phasename, sizeof(phasename), "None"); break;
+                    case 1: snprintf(phasename, sizeof(phasename), "KnockingDown"); knocked_out = 1; break;
+                    case 2: snprintf(phasename, sizeof(phasename), "KnockedOut"); knocked_out = 1; break;
+                    case 3: snprintf(phasename, sizeof(phasename), "Reviving"); knocked_out = 1; break;
+                    default: snprintf(phasename, sizeof(phasename), "Unknown(%d)", phase_val); knocked_out = (phase_val > 0); break;
+                }
+            } else {
+                /* Fallback to string comparison if raw read fails */
+                uint64_t phase = PL(phd) ? rr_u64(phd + RR_OFF_PRIM_VALUE) : 0;
+                if (PL(phase)) {
+                    uint64_t namestr = rr_u64(phase + RR_OFF_DESC_NAME);
+                    if (PL(namestr)) u_string(namestr, phasename, sizeof(phasename));
+                    knocked_out = (strcmp(phasename, "KnockedOut") == 0 || strcmp(phasename, "KnockingDown") == 0 || strcmp(phasename, "Reviving") == 0);
+                }
             }
         }
-        /* Also read IsDead for completeness */
-        uint64_t isd = rr_u64(p + RR_OFF_CHAR_ISDEAD);
-        uint64_t isdm = PL(isd) ? rr_u64(isd + 0x10) : 0;
-        int isdead = 0; if (PL(isdm)) { uint8_t b = 0; if (rr_read(isdm + 0x18, &b, 1)) isdead = b; }
-        snprintf(c->knockphase, sizeof(c->knockphase), "i%d k%d p='%s'",
-                 isdead, has_ko_model, phasename);
-        /* Player is knocked if IsDead is true OR (KnockoutModel exists AND phase name is "KnockedOut") */
-        c->knocked = (isdead || (has_ko_model && strcmp(phasename, "KnockedOut") == 0)) ? 1 : 0;
+
+        snprintf(c->knockphase, sizeof(c->knockphase), "i%d k=%s", isdead, phasename);
+        /* Player is knocked if IsDead OR KnockoutPhase != None */
+        c->knocked = (isdead || knocked_out) ? 1 : 0;
     }
     uint64_t wm = rr_u64(p + RR_OFF_CHAR_WEAPON);
     if (!c->weapon[0] && PL(wm)) {
